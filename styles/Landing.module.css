@@ -1,0 +1,20 @@
+.landing {
+    position: relative;
+    width: 100%;
+    color: white;
+    height: 100vh;
+}
+
+.portrait_div {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.portrait {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    /* clip-path: circle();
+    background-color: rgb(13, 0, 30); */
+}
