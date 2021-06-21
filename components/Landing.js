@@ -23,8 +23,8 @@ export default function Landing() {
                     />
             </div>
             <div className={styles.bg}></div>
-            <div className={styles.bg2}></div>
-            <div className={styles.bg3}></div>
+            <div className={`${styles.bg} ${styles.bg2}`}></div>
+            <div className={`${styles.bg} ${styles.bg3}`}></div>
         </section>
     )
 }
