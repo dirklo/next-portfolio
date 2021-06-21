@@ -22,6 +22,9 @@ export default function Landing() {
                     objectPosition = 'right bottom' 
                     />
             </div>
+            <div className={styles.bg}></div>
+            <div className={styles.bg2}></div>
+            <div className={styles.bg3}></div>
         </section>
     )
 }
