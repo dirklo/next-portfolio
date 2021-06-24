@@ -1,13 +1,14 @@
 .container {
+  position: relative;
   min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
 }
 
 .main {
   width: 100%;
-  max-width: 1320px;
 }

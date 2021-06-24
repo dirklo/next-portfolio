@@ -12,7 +12,6 @@ export default function Home() {
         <meta name="description" content="Development portfolio for Rick Moore" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <Landing />
       </main>
