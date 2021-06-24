@@ -12,16 +12,32 @@
 }
 
 .nav_links {
-    color: white;
     position: relative;
+    color: white;
 }
 
-.nav_links a{
+.nav_links a {
     margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.nav_links a:hover {
+    transform: scale(1.5);
+    color:rgb(110, 171, 224);
 }
 
 .active {
-    text-decoration: underline;
+    color: rgb(32, 110, 178);
+}
+
+.bar {
+    position: absolute;
+    top: 20px;
+    height: 5px;
+    width: 43px;
+    border-radius: 20px;
+    background: white;
+    transition: all .5s;
 }
 
 /* LOGO */
