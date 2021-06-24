@@ -9,7 +9,7 @@ export default function NavBar() {
 
     const router = useRouter()
     
-    function moveBar(target) {
+    function positionBar(target) {
         const bar = document.getElementsByClassName(`${styles.bar}`)[0]
         bar.style.left = `${target.offsetLeft}px`;
         bar.style.width = `${target.offsetWidth}px`;
@@ -18,7 +18,7 @@ export default function NavBar() {
 
     useEffect(() => {
         const active = document.getElementsByClassName(`${styles.active}`)[0]
-        moveBar(active)
+        positionBar(active)
     })
 
     return (
@@ -34,7 +34,6 @@ export default function NavBar() {
                 <Link href='/'>
                     <a 
                         className={router.pathname == '/' ? `${styles.active}` : null}
-                        onClick={(e) => moveBar(e.target)} 
                     >
                         Home
                     </a> 
@@ -42,7 +41,6 @@ export default function NavBar() {
                 <Link href='/projects'>
                     <a 
                         className={router.pathname == '/projects' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e.target)} 
                     >
                         Projects
                     </a> 
@@ -50,7 +48,6 @@ export default function NavBar() {
                 <Link href='/about'>
                     <a 
                         className={router.pathname == '/about' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e.target)} 
                     >
                         About Me
                     </a> 
@@ -58,7 +55,6 @@ export default function NavBar() {
                 <Link href='/resume'>
                     <a 
                         className={router.pathname == '/resume' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e.target)} 
                     >
                         Resume
                     </a> 
@@ -66,7 +62,6 @@ export default function NavBar() {
                 <Link href='/contact'>
                     <a 
                         className={router.pathname == '/contact' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e)} 
                     >
                         Contact
                     </a> 

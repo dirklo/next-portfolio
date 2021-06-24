@@ -1,0 +1,18 @@
+.social_container {
+    position: relative;
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.social_container a {
+    height: 64;
+    width: 64;
+    transition: all 0.3s ease-in-out
+}
+
+.social_container a:hover {
+    transform: scale(1.2);
+}
