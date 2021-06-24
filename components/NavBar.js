@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -9,12 +9,17 @@ export default function NavBar() {
 
     const router = useRouter()
     
-    function moveBar(e) {
+    function moveBar(target) {
         const bar = document.getElementsByClassName(`${styles.bar}`)[0]
-        bar.style.left = `${e.target.offsetLeft}px`;
-        bar.style.width = `${e.target.offsetWidth}px`;
-        console.log(e.target.offsetWidth)
+        bar.style.left = `${target.offsetLeft}px`;
+        bar.style.width = `${target.offsetWidth}px`;
+        console.log(target.offsetWidth)
     }
+
+    useEffect(() => {
+        const active = document.getElementsByClassName(`${styles.active}`)[0]
+        moveBar(active)
+    })
 
     return (
         <nav className={styles.nav_bar}>
@@ -29,7 +34,7 @@ export default function NavBar() {
                 <Link href='/'>
                     <a 
                         className={router.pathname == '/' ? `${styles.active}` : null}
-                        onClick={(e) => moveBar(e)} 
+                        onClick={(e) => moveBar(e.target)} 
                     >
                         Home
                     </a> 
@@ -37,7 +42,7 @@ export default function NavBar() {
                 <Link href='/projects'>
                     <a 
                         className={router.pathname == '/projects' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e)} 
+                        onClick={(e) => moveBar(e.target)} 
                     >
                         Projects
                     </a> 
@@ -45,7 +50,7 @@ export default function NavBar() {
                 <Link href='/about'>
                     <a 
                         className={router.pathname == '/about' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e)} 
+                        onClick={(e) => moveBar(e.target)} 
                     >
                         About Me
                     </a> 
@@ -53,7 +58,7 @@ export default function NavBar() {
                 <Link href='/resume'>
                     <a 
                         className={router.pathname == '/resume' ? `${styles.active}` : null} 
-                        onClick={(e) => moveBar(e)} 
+                        onClick={(e) => moveBar(e.target)} 
                     >
                         Resume
                     </a> 
