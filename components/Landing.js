@@ -8,12 +8,6 @@ import logo from '../public/SVGLogo.svg'
 export default function Landing() {
     return (
         <section className={styles.landing}>
-            <div className={styles.logo}>
-                <Image
-                src={logo}
-                alt='Logo'
-                ></Image>
-            </div>
             <div className={styles.name_div}>
                 <div className={styles.rect}></div>
                 <h1>Rick</h1>

@@ -19,3 +19,16 @@
 .nav_links a{
     margin-right: 20px;
 }
+
+.active {
+    text-decoration: underline;
+}
+
+/* LOGO */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+}

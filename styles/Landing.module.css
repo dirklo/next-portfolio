@@ -64,12 +64,3 @@
         transform: rotateZ(360deg) rotate(-45deg); 
     }
 }
-
-/* LOGO */
-.logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 100px;
-    width: 100px;
-}
