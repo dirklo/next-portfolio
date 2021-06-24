@@ -42,9 +42,7 @@
 
 /* LOGO */
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 100px;
-    width: 100px;
+    position: relative;
+    height: 70px;
+    width: 70px;
 }
