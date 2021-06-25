@@ -1,8 +1,20 @@
 import NavBar from '../components/NavBar'
 import styles from '../styles/Layout.module.css'
 import Floater from '../components/Floater'
+import { useSpring, animated } from 'react-spring'
 
 const Layout = ({ children }) => {
+
+    const fade = useSpring({
+        from: {
+            opacity: 1
+        },
+        to: {
+            opactiy: 0
+        }
+    })
+
+    console.log(fade)
 
     function createFloaters(numFloaters) {
         const randomSize = () => Math.floor(Math.random() * 100 + 50)
