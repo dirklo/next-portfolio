@@ -23,6 +23,12 @@ export default function NavBar() {
 
     return (
         <nav className={styles.nav_bar}>
+            <div className={styles.logo}>
+                <Image
+                    src={logo}
+                    alt='Logo'
+                ></Image>
+            </div>
             <div className={styles.nav_links}>
                 <div className={styles.bar}></div>
                 <Link href='/'>
@@ -60,12 +66,6 @@ export default function NavBar() {
                         Contact
                     </a> 
                 </Link>
-            </div>
-            <div className={styles.logo}>
-                <Image
-                    src={logo}
-                    alt='Logo'
-                ></Image>
             </div>
         </nav>
     )

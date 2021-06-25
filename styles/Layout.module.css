@@ -2,6 +2,7 @@
     position: relative;
     width: 100vw;
     max-width: 1320px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,7 +12,7 @@
 
 /* FLOATERS */
 
-.floater {
+/* .floater {
     position: relative;
     border-radius: 20px;
     background-color: gold;
@@ -21,4 +22,4 @@
 .floater_container {
     position: absolute;
     overflow: visible;
-}
+} */

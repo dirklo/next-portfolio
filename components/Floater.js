@@ -4,21 +4,10 @@ import { useSpring, animated } from 'react-spring'
 
 
 export default function Floater() {
-    
-    const [height, setHeight] = useState(0)
 
     const randomSpeed = () => Math.floor(Math.random() * 2000 + 5000)
     const size = Math.floor(Math.random() * 100 + 50)
     const location = Math.floor(Math.random() * 100)
-
-    useLayoutEffect(() => {
-        function updateSize() {
-          setHeight(window.innerHeight);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
 
     const spin = useSpring({
         loop: true,

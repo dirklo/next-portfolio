@@ -21,9 +21,6 @@ const Layout = ({ children }) => {
         <div className={styles.content}>
             <NavBar /> 
             { children }
-            { createFloaters(12).map(floaterData => 
-                <Floater key={floaterData.index} />
-            )}
         </div>
     )
 }

@@ -9,7 +9,8 @@ export default function Landing() {
         <section className={styles.landing}>
             <div className={styles.name_div}>
                 <div className={styles.rect}></div>
-                <h1>Rick Moore</h1>
+                <h1>Hey there, I&apos;m Rick!</h1>
+                <h2>I&apos;m a software engineer and web developer</h2>
                 <div className={styles.social_bar}></div>
                 <SocialContainer />
             </div>
