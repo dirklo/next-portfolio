@@ -1,19 +1,59 @@
-import React from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import styles from '../styles/Layout.module.css'
+import { useSpring, animated } from 'react-spring'
 
-export default function Floater({ size, location }) {
+
+export default function Floater() {
+    
+    const [height, setHeight] = useState(0)
+
+    const randomSpeed = () => Math.floor(Math.random() * 2000 + 5000)
+    const size = Math.floor(Math.random() * 100 + 50)
+    const location = Math.floor(Math.random() * 100)
+
+    useLayoutEffect(() => {
+        function updateSize() {
+          setHeight(window.innerHeight);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+
+    const spin = useSpring({
+        loop: true,
+        config: { duration: randomSpeed() },
+        from: { 
+            rotateZ: 0
+        },
+        to: {
+            rotateZ: 360 
+        }      
+    })
+
+    const travel = useSpring({
+        loop: true,
+        config: { duration: randomSpeed()*2 },
+        from: {
+            translateY: height + 150
+        },
+        to: {
+            translateY: -150
+        }   
+    })
+
     return (
         <>
-            <div 
+            <animated.div 
                 className={styles.floater_container}
-                style={{ width: size, height: size, left: `${location}%` }}  
+                style={{ width: size, height: size, left: `${location}%`, ...travel }}  
             >
-                <div 
+                <animated.div
                     className={styles.floater}
-                    style={{ width: size, height: size }}    
+                    style={{ width: size, height: size, ...spin }}    
                 >
-                </div>
-            </div>
+                </animated.div>
+            </animated.div>
         </>
     )
 }

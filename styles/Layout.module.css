@@ -22,21 +22,3 @@
     position: absolute;
     overflow: visible;
 }
-
-@keyframes spin {
-    from { 
-        transform: rotateZ(0deg) rotate(-45deg); 
-    }
-    to {
-        transform: rotateZ(360deg) rotate(-45deg); 
-    }
-}
-
-@keyframes travel {
-    from {
-        transform: translateY(calc(100vh + 150px))
-    }
-    to {
-        transform: translateY(-150px)
-    }
-}
