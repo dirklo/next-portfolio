@@ -6,7 +6,9 @@ import SocialContainer from './SocialContainer'
 
 export default function Landing() {
     return (
-        <section className={styles.landing}>
+        <section
+            className={styles.landing}
+        >
             <div className={styles.name_div}>
                 <div className={styles.rect}></div>
                 <h1>Hey there, I&apos;m Rick!</h1>
@@ -14,7 +16,9 @@ export default function Landing() {
                 <div className={styles.social_bar}></div>
                 <SocialContainer />
             </div>
-            <div className={styles.portrait_div}>
+            <div 
+                className={styles.portrait_div}
+            >
                 <Image 
                     className={styles.portrait} 
                     src={portrait} 

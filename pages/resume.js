@@ -1,9 +1,14 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function resume() {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             I AM RESUME
-        </div>
+        </motion.div>
     )
 }

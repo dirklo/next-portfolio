@@ -4,11 +4,10 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from '../styles/NavBar.module.css'
 import logo from '../public/SVGLogo.svg'
-
 export default function NavBar() {
 
     const router = useRouter()
-    
+
     function positionBar(target) {
         const bar = document.getElementsByClassName(`${styles.bar}`)[0]
         bar.style.left = `${target.offsetLeft}px`;
