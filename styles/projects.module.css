@@ -28,8 +28,8 @@
     
 }
 
-.project_select > div > img {
-    filter: invert(100%) hue-rotate(270deg);   
+.project_select > div > img:hover {
+    filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
 }
 
 /* .saturate { filter: saturate(3); }
