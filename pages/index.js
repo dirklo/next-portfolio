@@ -7,10 +7,7 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <div 
       className={styles.container}
     >
       <Head>
@@ -21,6 +18,6 @@ export default function Home() {
       <main className={styles.main}>
         <Landing />
       </main>
-    </motion.div>
+    </div>
   )
 }

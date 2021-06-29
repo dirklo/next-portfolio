@@ -3,6 +3,7 @@
     background: transparent;
     top: 0;
     width: 100%;
+    max-width: 1320px;
     height: 80px;
     display: flex;
     flex-direction: row;
