@@ -1,0 +1,28 @@
+.projects {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_select {
+    width: 500px;
+    height: 80px;
+    padding: 10px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background: #475074;
+    border-radius: 100px;
+}
+
+.project_select > div {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
