@@ -14,22 +14,7 @@ export default function Landing() {
             className={styles.landing}
         >
             <div className={styles.name_div}>
-                <motion.div 
-                    className={styles.rect}
-                    initial="moved" 
-                    animate="positioned"
-                    variants={{
-                        moved: {
-                            x: -500
-                        },
-                        positioned: {
-                            x: 0,
-                            transition: {
-                                duration: .6
-                            }
-                        }
-                    }}
-                ></motion.div>
+                <div className={styles.rect}></div>
                 <motion.div 
                     initial="moved" 
                     animate="positioned"
