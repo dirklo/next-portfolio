@@ -1,6 +1,5 @@
 import NavBar from '../components/NavBar'
 import styles from '../styles/Layout.module.css'
-import Floater from '../components/Floater'
 
 const Layout = ({ children }) => {
 
