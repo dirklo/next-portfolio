@@ -25,14 +25,24 @@
     height: 40px;
     width: 40px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
+.project_select > div:hover {
+    transform: scale(1.1);
+}
+
+
 .project_select > div > img {
-    transition: all .5s linear;
+    transition: all .3s ease-in-out;
 }
 
 .project_select > div > img.selected {
     filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
+}
+
+.project_select > div > img:hover {
+    filter: invert(1); 
 }
 
 .project_display {

@@ -35,20 +35,22 @@ export default function Taskaholik() {
                     <em><b>React-query</b></em>- Data fetching and memization.
                 </p>
                 <div className={styles.cta_buttons}>
-                    <a
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href='https://github.com/dirklo/taskaholik-front-end'
                         target='_blank'
                         rel='noreferrer'
                     >
                         View Code
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href='https://dirklo.github.io/taskaholik-front-end/'
                         target='_blank'
                         rel='noreferrer'
                     >
                         Live App
-                    </a>
+                    </motion.a>
                 </div>
             </motion.section>
             <motion.section 
