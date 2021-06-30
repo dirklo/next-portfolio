@@ -42,4 +42,41 @@
 /* PROJECTS */
 .project {
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.left_pane {
+    width: 60%;
+    padding-right: 220px;
+}
+.right_pane {
+    width: 40%;
+}
+
+.project h1 {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 81px;
+    letter-spacing: 0.175em;
+}
+
+.project h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.project p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
 }

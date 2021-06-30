@@ -3,7 +3,7 @@ import styles from '../../styles/projects.module.css'
 
 export default function Pantam() {
     return (
-        <div className={styles.projects}>
+        <div className={styles.project}>
             I AM PANTAM
         </div>
     )
