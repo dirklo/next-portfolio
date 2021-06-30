@@ -19,7 +19,8 @@ export default function Taskaholik() {
                 exit={{y: 1000}}
                 transition={{
                     type: 'spring',
-                    duration: .8
+                    duration: .8,
+                    staggerChildren: .5
                 }}
             >
                 <h1>Taskaholik</h1>
@@ -38,6 +39,7 @@ export default function Taskaholik() {
                 className={styles.right_pane}
                 initial={{ x: 500 }}
                 animate={{ x: 0 }}
+                exit={{y: 1000}}
                 transition={{
                     type: 'spring',
                     delay: .3,
