@@ -6,12 +6,22 @@ import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
 import reactSvgLogo from '../../public/reactSvgLogo.svg'
 import reduxSvgLogo from '../../public/reduxSvgLogo.svg'
 import railsSvgLogo from '../../public/railsSvgLogo.svg'
+import { motion } from 'framer-motion'
 
 
 export default function Taskaholik() {
     return (
         <div className={styles.project}>   
-            <section className={styles.left_pane}>
+            <motion.section 
+                className={styles.left_pane}
+                initial={{ x: -500 }}
+                animate={{ x: 0 }}
+                exit={{y: 1000}}
+                transition={{
+                    type: 'spring',
+                    duration: .8
+                }}
+            >
                 <h1>Taskaholik</h1>
                 <h2>Bug-tracker and team management application built with React and Ruby on Rails</h2>
                 <p>
@@ -23,16 +33,25 @@ export default function Taskaholik() {
                         <br /><br />
                     React-query - Data fetching and memization.
                 </p>
-            </section>
-            <section className={styles.right_pane}>
+            </motion.section>
+            <motion.section 
+                className={styles.right_pane}
+                initial={{ x: 500 }}
+                animate={{ x: 0 }}
+                transition={{
+                    type: 'spring',
+                    delay: .3,
+                    duration: .6
+                }}
+            >
                 <div className={styles.techlist}>
-                    <Image src={javascriptSvgLogo} height="60"></Image>
-                    <Image src={reactSvgLogo} height="60"></Image>
-                    <Image src={reduxSvgLogo} height="60"></Image>
-                    <Image src={railsSvgLogo} height="60"></Image>
+                    <Image src={javascriptSvgLogo} alt="Javascript logo"></Image>
+                    <Image src={reactSvgLogo} alt="React Logo"></Image>
+                    <Image src={reduxSvgLogo} alt="Redux Logo"></Image>
+                    <Image src={railsSvgLogo} alt="Rails Logo"></Image>
                 </div>
                 <Image src={mockups} alt="Taskaholic Mockups" />
-            </section>
+            </motion.section>
         </div>
     )
 }
