@@ -10,8 +10,8 @@
 }
 
 .project_select {
-    width: 500px;
-    height: 80px;
+    width: 400px;
+    height: 60px;
     padding: 10px 10px 0px;
     display: flex;
     flex-direction: row;
@@ -22,8 +22,8 @@
 }
 
 .project_select > div {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
 }
 
@@ -54,6 +54,10 @@
 }
 .right_pane {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .project h1 {
@@ -79,4 +83,18 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+}
+
+.project .techlist {
+    margin: 50px 0;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .techlist > div {
+    height: 60px;
+    width: 60px;
 }

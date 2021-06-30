@@ -2,6 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/projects.module.css'
 import mockups from '../../public/TaskaholikMockups.png'
+import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
+import reactSvgLogo from '../../public/reactSvgLogo.svg'
+import reduxSvgLogo from '../../public/reduxSvgLogo.svg'
+import railsSvgLogo from '../../public/railsSvgLogo.svg'
 
 
 export default function Taskaholik() {
@@ -21,6 +25,12 @@ export default function Taskaholik() {
                 </p>
             </section>
             <section className={styles.right_pane}>
+                <div className={styles.techlist}>
+                    <Image src={javascriptSvgLogo} height="60"></Image>
+                    <Image src={reactSvgLogo} height="60"></Image>
+                    <Image src={reduxSvgLogo} height="60"></Image>
+                    <Image src={railsSvgLogo} height="60"></Image>
+                </div>
                 <Image src={mockups} alt="Taskaholic Mockups" />
             </section>
         </div>
