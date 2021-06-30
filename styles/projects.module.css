@@ -28,7 +28,11 @@
     
 }
 
-.project_select > div > img:hover {
+.project_select > div > img {
+    transition: all .5s linear;
+}
+
+.project_select > div > img.selected {
     filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
 }
 
