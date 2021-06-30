@@ -25,7 +25,6 @@
     height: 60px;
     width: 60px;
     cursor: pointer;
-    
 }
 
 .project_select > div > img {
@@ -36,12 +35,11 @@
     filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
 }
 
-/* .saturate { filter: saturate(3); }
-.grayscale { filter: grayscale(100%); }
-.contrast { filter: contrast(160%); }
-.brightness { filter: brightness(0.25); }
-.blur { filter: blur(3px); }
-.invert { filter: invert(100%); }
-.sepia { filter: sepia(100%); }
-.huerotate { filter: hue-rotate(180deg); }
-.rss.opacity { filter: opacity(50%); } */
+.project_display {
+    width: 100%;
+}
+
+/* PROJECTS */
+.project {
+    color: white;
+}

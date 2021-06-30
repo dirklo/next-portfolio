@@ -7,6 +7,11 @@ import pantamSvgLogo from '../public/pantamSvgLogo.svg'
 import chartsourceSvgLogo from '../public/chartsourceSvgLogo.svg'
 import quizitSvgLogo from '../public/quizitSvgLogo.svg'
 import cryptosearchSvgLogo from '../public/cryptosearchSvgLogo.svg'
+import Taskaholik from '../components/projects/Taskaholik'
+import Pantam from '../components/projects/Pantam'
+import Chartsource from '../components/projects/Chartsource'
+import Quizit from '../components/projects/Quizit'
+import Cryptosearch from '../components/projects/Cryptosearch'
 
 export default function Projects() {
 
@@ -14,6 +19,23 @@ export default function Projects() {
     
     const handleClick = (e) => {
         setSelectedProject(Number(e.target.dataset.id))
+    }
+
+    const displaySelectedProject = () => {
+        switch (selectedProject) {
+            case 0:
+                return <Taskaholik />
+            case 1:
+                return <Pantam />
+            case 2:
+                return <Chartsource />
+            case 3:
+                return <Quizit />
+            case 4:
+                return <Cryptosearch />
+            default:
+                return "SELECT A PROJECT"
+        }
     }
 
     return (
@@ -60,6 +82,9 @@ export default function Projects() {
                     alt="Cryptosearch Logo"
                 />
             </div>
+            <section className={styles.project_display}>
+                {displaySelectedProject()}
+            </section>
         </motion.div>
     )
 }
