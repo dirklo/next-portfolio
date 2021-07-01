@@ -39,22 +39,23 @@ export default function ChartSource() {
                     <div className={styles.cta_buttons}>
                         <motion.button
                             type="button"
-                            onClick={() => location.href='https://github.com/dirklo/taskaholik-front-end'}
+                            onClick = {() => {
+                                window.open('https://github.com/dirklo/chart-source', '_blank')
+                            }}
                             whileHover={{ scale: 1.1 }}
+                            whileTap={{ backgroundColor: '#062f36' }}
                         >
                             View Code
                         </motion.button>
                         <motion.button
                             type="button"
+                            onClick = {() => {
+                                window.open('https://chart-source.herokuapp.com/', '_blank')
+                            }}
                             whileHover={{ scale: 1.1 }}
+                            whileTap={{ backgroundColor: '#1c0f41' }}
                         >
-                            <a
-                                href='https://dirklo.github.io/taskaholik-front-end/'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                Live App
-                            </a>
+                            Live App
                         </motion.button>
                     </div>
                 </motion.section>

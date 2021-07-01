@@ -35,8 +35,11 @@ export default function Cryptosearch() {
                     <div className={styles.cta_buttons}>
                         <motion.button
                             type="button"
-                            onClick={() => location.href='https://github.com/dirklo/crypto_search_cli'}
+                            onClick = {() => {
+                                window.open('https://github.com/dirklo/crypto_search_cli', '_blank')
+                            }}
                             whileHover={{ scale: 1.1 }}
+                            whileTap={{ backgroundColor: '#062f36' }}
                         >
                             View Code
                         </motion.button>

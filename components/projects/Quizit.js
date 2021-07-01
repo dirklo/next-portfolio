@@ -37,22 +37,23 @@ export default function Quizit() {
                     <div className={styles.cta_buttons}>
                         <motion.button
                             type="button"
-                            onClick={() => location.href='https://github.com/dirklo/quiz-it-three'}
+                            onClick = {() => {
+                                window.open('https://github.com/dirklo/quiz-it-three', '_blank')
+                            }}
                             whileHover={{ scale: 1.1 }}
+                            whileTap={{ backgroundColor: '#062f36' }}
                         >
                             View Code
                         </motion.button>
                         <motion.button
                             type="button"
+                            onClick = {() => {
+                                window.open('https://quiz-it-three.herokuapp.com', '_blank')
+                            }}
                             whileHover={{ scale: 1.1 }}
+                            whileTap={{ backgroundColor: '#1c0f41' }}
                         >
-                            <a
-                                href='https://dirklo.github.io/quiz-it-three/'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                Live App
-                            </a>
+                            Live App
                         </motion.button>
                     </div>
                 </motion.section>
