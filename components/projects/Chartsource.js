@@ -4,6 +4,7 @@ import styles from '../../styles/projects.module.css'
 import mockups from '../../public/chartsourceMockups.png'
 import rubySvgLogo from '../../public/rubySvgLogo.svg'
 import railsSvgLogo from '../../public/railsSvgLogo.svg'
+import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
@@ -27,13 +28,13 @@ export default function ChartSource() {
                     <p>
                         Upload your entire sheet music library, organize and create setlists, and share with your team at the click of a button!
                             <br /><br />
-                        <em><b>Ruby on Rails</b></em> - Manages data across the application.
+                        <em><b>Ruby on Rails</b></em> - Manages data across the application with Active-Record and PostgreSql.
                             <br /><br />
                         <em><b>Drag and Drop </b></em> - Full user authentication by use of JSON Web Tokens.  
                             <br /><br />
-                        <em><b>Dynamic Nested Forms</b></em>- Data fetching and memization.
+                        <em><b>Dynamic Nested Forms</b></em> - Data fetching and memization.
                             <br /><br />
-                        <em><b>Omniauth</b></em>- Implemented user login using facebook or Github account.
+                        <em><b>Omniauth</b></em> - Implemented user login using facebook or Github account.
                     </p>
                     <div className={styles.cta_buttons}>
                         <motion.button
@@ -74,6 +75,9 @@ export default function ChartSource() {
                         </div>
                         <div>
                             <Image src={railsSvgLogo} alt="Rails Logo" />
+                        </div>
+                        <div>
+                            <Image src={javascriptSvgLogo} alt="Javascript Logo" />
                         </div>
                     </div>
                     <Image src={mockups} alt="Taskaholic Mockups" />
