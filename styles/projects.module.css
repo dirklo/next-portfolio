@@ -47,7 +47,6 @@
 
 .project_display {
     width: 100%;
-    flex-basis: 100%;
 }
 
 /* PROJECTS */
@@ -100,16 +99,16 @@
 
 .project .techlist {
     margin: 50px 0;
-    width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.project .techlist > div {
+.project .techlist div {
     height: 60px;
     width: 60px;
+    margin: 0 10px;
 }
 
 .project .cta_buttons {
@@ -129,6 +128,7 @@
     padding: 9px 41px;
     border-radius: 50px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .project .cta_buttons button:first-child {
