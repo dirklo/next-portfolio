@@ -116,13 +116,14 @@
     margin-top: 50px;
 }
 
-.project .cta_buttons a {
+.project .cta_buttons button {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.03em;
+    border: none;
     text-decoration: none;
     color: #FFFFFF;
     padding: 9px 41px;
@@ -130,10 +131,10 @@
     margin-right: 10px;
 }
 
-.project .cta_buttons a:first-child {
+.project .cta_buttons button:first-child {
     background: #108090;
 }
 
-.project .cta_buttons a:last-child {
+.project .cta_buttons button:last-child {
     background: #8B7FAD;
 }
