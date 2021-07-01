@@ -9,7 +9,7 @@ import quizitSvgLogo from '../public/quizitSvgLogo.svg'
 import cryptosearchSvgLogo from '../public/cryptosearchSvgLogo.svg'
 import Taskaholik from '../components/projects/Taskaholik'
 import Pantam from '../components/projects/Pantam'
-import Chartsource from '../components/projects/Chartsource'
+import ChartSource from '../components/projects/ChartSource'
 import Quizit from '../components/projects/Quizit'
 import Cryptosearch from '../components/projects/Cryptosearch'
 
@@ -28,7 +28,7 @@ export default function Projects() {
             case 1:
                 return <Pantam />
             case 2:
-                return <Chartsource />
+                return <ChartSource />
             case 3:
                 return <Quizit />
             case 4:

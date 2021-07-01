@@ -1,15 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/projects.module.css'
-import mockups from '../../public/TaskaholikMockups.png'
-import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
-import reactSvgLogo from '../../public/reactSvgLogo.svg'
-import reduxSvgLogo from '../../public/reduxSvgLogo.svg'
+import mockups from '../../public/chartsourceMockups.png'
+import rubySvgLogo from '../../public/rubySvgLogo.svg'
 import railsSvgLogo from '../../public/railsSvgLogo.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
-export default function Taskaholik() {
+export default function ChartSource() {
     return (
         <AnimatePresence>
             <div className={styles.project}>   
@@ -24,16 +22,18 @@ export default function Taskaholik() {
                         staggerChildren: 0.5
                     }}
                 >
-                    <h1>ChartSource</h1>
-                    <h2>Bug-tracker and team management application built with React and Ruby on Rails</h2>
+                    <h1>Chart-Source</h1>
+                    <h2>Library tool for bandleaders to quickly share PDF charts with their team.</h2>
                     <p>
-                        Put together a team, create a project, outline your goals and deadlines, and assign team members.
+                        Upload your entire sheet music library, organize and create setlists, and share with your team at the click of a button!
                             <br /><br />
-                        <em><b>Redux</b></em> - Manages data across the application.
+                        <em><b>Ruby on Rails</b></em> - Manages data across the application.
                             <br /><br />
-                        <em><b>Devise/JWT’s</b></em> - Full user authentication by use of JSON Web Tokens.  
+                        <em><b>Drag and Drop </b></em> - Full user authentication by use of JSON Web Tokens.  
                             <br /><br />
-                        <em><b>React-query</b></em>- Data fetching and memization.
+                        <em><b>Dynamic Nested Forms</b></em>- Data fetching and memization.
+                            <br /><br />
+                        <em><b>Omniauth</b></em>- Implemented user login using facebook or Github account.
                     </p>
                     <div className={styles.cta_buttons}>
                         <motion.button
@@ -70,16 +70,10 @@ export default function Taskaholik() {
                 >
                     <div className={styles.techlist}>
                         <div>
-                            <Image src={javascriptSvgLogo} alt="Javascript logo"></Image>
+                            <Image src={rubySvgLogo} alt="Ruby Logo" />
                         </div>
                         <div>
-                            <Image src={reactSvgLogo} alt="React Logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={reduxSvgLogo} alt="Redux Logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={railsSvgLogo} alt="Rails Logo"></Image>
+                            <Image src={railsSvgLogo} alt="Rails Logo" />
                         </div>
                     </div>
                     <Image src={mockups} alt="Taskaholic Mockups" />
