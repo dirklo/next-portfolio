@@ -1,149 +1,214 @@
-import taskaholik from '../img/taskaholik.png'
-import taskaholikBg from '../img/taskaholikBg.png'
-import pantam from '../img/pantam.png'
-import pantamBg from '../img/pantamBg.jpg'
-import chartsource from '../img/chartsource.png'
-import chartsourceBg from '../img/chartsourceBg.jpg'
-import quizit from '../img/quizit.png'
-import quizitBg from '../img/quizitBg.jpg'
-import cryptosearch from '../img/cryptosearch.png'
-import cryptosearchBg from '../img/cryptosearchBg.png'
-import javascript from '../img/javascript.svg'
-import rails from '../img/rails.png'
-import ruby from '../img/ruby.svg'
-import sinatra from '../img/sinatra.png'
-import react from '../img/react.png'
+// import taskaholik from '../img/taskaholik.png'
+// import taskaholikBg from '../img/taskaholikBg.png'
+// import pantam from '../img/pantam.png'
+// import pantamBg from '../img/pantamBg.jpg'
+// import chartsource from '../img/chartsource.png'
+// import chartsourceBg from '../img/chartsourceBg.jpg'
+// import quizit from '../img/quizit.png'
+// import quizitBg from '../img/quizitBg.jpg'
+// import cryptosearch from '../img/cryptosearch.png'
+// import cryptosearchBg from '../img/cryptosearchBg.png'
+// import javascript from '../img/javascript.svg'
+// import rails from '../img/rails.png'
+// import ruby from '../img/ruby.svg'
+// import sinatra from '../img/sinatra.png'
+// import react from '../img/react.png'
 
 const projects = [
     {
         title: 'Taskaholik',
-        titleImg: {
-            url: taskaholik,
-            height: '80px'
-        },
-        bgImg: {
-            url: taskaholikBg
-        },
+        description: 'Bug-tracker and team management application built with React and Ruby on Rails',
+        subDescription: 'Put together a team, create a project, outline your goals and deadlines, and assign team members.',
+        details: [
+            {
+                title: 'Redux',
+                description: 'Manages data across the application.'
+            },
+            {
+                title: "Devise/JWT's",
+                description: 'Full user authentication by use of JSON Web Tokens.'
+            },
+            {
+                title: 'React-query',
+                description: 'Data fetching and memization.'
+            }
+        ],
+        codeUrl: 'https://github.com/dirklo/taskaholik-front-end',
+        liveUrl: 'https://dirklo.github.io/taskaholik-front-end/',
         techs: [
-            {name: 'react', img: react, height: '75px'},
-            {name: 'javascript', img: javascript, height: '85px'},
-            {name: 'rails', img: rails, height: '75px'}
+            {
+                svgUrl: '/javascriptSvgLogo.svg',
+                altText: 'Javascript Logo'
+            },
+            {
+                svgUrl: '/reactSvgLogo.svg',
+                altText: 'React Logo'
+            },
+            {
+                svgUrl: '/reduxSvgLogo.svg',
+                altText: 'Redux Logo'
+            },
+            {
+                svgUrl: '/railsSvgLogo.svg',
+                altText: 'Rails Logo'
+            }
         ],
-        links: [
-            {type: 'Code', url: 'https://github.com/dirklo/taskaholik-front-end'},
-            {type: 'Demo', url: 'https://youtu.be/FmPsPjfME3E'},
-            {type: 'Live App', url: 'https://dirklo.github.io/taskaholik-front-end/'}
-        ],
-        description: "Bug-tracker that allows a team to delegate and track work on multiple projects.",
-        bullets: [
-            "React - including hooks and routing.", 
-            "Redux and Thunk - asynchronously updates and persists information for users in real-time.",
-            "Devise gem - User login using JSON Web Tokens."
-        ]
+        mockup: {
+            url: '/TaskaholikMockups.png',
+            height: '464',
+            width: '500'
+        }
     },
-
     {
         title: 'Pantam',
-        titleImg: {
-            url: pantam,
-            height: '80px'
-        },
-        bgImg: {
-            url: pantamBg
-        },
+        description: 'Playable, in-browser virtual instrument.  Built with JavaScript, Web Audio API, and Ruby on Rails.',
+        subDescription: 'Create and save your own unique scales, and play your custom Hand Pan with your keyboard!',
+        details: [
+            {
+                title: 'Unique Interface',
+                description: '3-tier keyboard mapping for dynamic, expressive performance.'
+            },
+            {
+                title: 'Asynchronous JavaScript',
+                description: 'Database implemented with a headless Ruby on Rails API and Fetch.'
+            },
+            {
+                title: 'Audio Effects',
+                description: 'Designed and managed with Web Audio API.'
+            }
+        ],
+        codeUrl: 'https://github.com/dirklo/hang-pan-frontend',
+        liveUrl: 'https://dirklo.github.io/hang-pan-frontend/',
         techs: [
-            {name: 'javascript', img: javascript, height: '85px'},
-            {name: 'rails', img: rails, height: '75px'}
+            {
+                svgUrl: '/javascriptSvgLogo.svg',
+                altText: 'Javascript Logo'
+            },
+            {
+                svgUrl: '/railsSvgLogo.svg',
+                altText: 'Rails Logo'
+            }
         ],
-        links: [
-            {type: 'Code', url: 'https://github.com/dirklo/hang-pan-frontend'},
-            {type: 'Demo', url: 'https://youtu.be/36xpt6U-q0g'},
-            {type: 'Live App', url: 'https://dirklo.github.io/hang-pan-frontend/'}
-        ],
-        description: "Virtual Instrument that users can perform in-browser.",
-        bullets: [
-            "Built with vanilla JavaScript and Ruby on Rails.", 
-            "Web Audio API - In-browser audio sampling and effects processing.",
-            "Asynchronous JavaScript - Database communication implemented with fetch and headless Rails API."
-        ]
-
+        mockup: {
+            url: '/PantamMockups.png',
+            height: '464',
+            width: '500'
+        }
     },
-
     {
-        title: 'Chart Source',
-        titleImg: {
-            url: chartsource,
-            height: '40px'
-        },
-        bgImg: {
-            url: chartsourceBg
-        },
+        title: 'Chart-Source',
+        description: 'Library tool for bandleaders to quickly share PDF charts with their team.',
+        subDescription: 'Upload your entire sheet music library, organize and create setlists, and share with your team at the click of a button!',
+        details: [
+            {
+                title: 'Ruby on Rails',
+                description: 'Manages data across the application with Active-Record and PostgreSql.'
+            },
+            {
+                title: 'Drag and Drop',
+                description: 'Full user authentication by use of JSON Web Tokens.  '
+            },
+            {
+                title: 'Dynamic Nested Forms',
+                description: 'Data fetching and memization.'
+            },
+            {
+                title: 'Omniauth',
+                description: 'Implemented user login using facebook or Github account.'
+            }
+        ],
+        codeUrl: 'https://github.com/dirklo/chart-source',
+        liveUrl: 'https://chart-source.herokuapp.com/',
         techs: [
-            {name: 'ruby', img: ruby, height: '75px'},
-            {name: 'rails', img: rails, height: '75px'}
+            {
+                svgUrl: '/rubySvgLogo.svg',
+                altText: 'Ruby Logo'
+            },
+            {
+                svgUrl: '/railsSvgLogo.svg',
+                altText: 'Rails Logo'
+            },
+            {
+                svgUrl: '/javascriptSvgLogo.svg',
+                altText: 'Javascript Logo'
+            }
         ],
-        links: [
-            {type: 'Code', url: 'https://github.com/dirklo/chart-source'},
-            {type: 'Demo', url: 'https://youtu.be/WjS2R5mJihA'},
-            {type: 'Live App', url: 'https://chart-source.herokuapp.com/'}
-        ],
-        description: "Platform for Band-leaders to upload their PDF chart library, create and share setlists with a team.",
-        bullets: [
-            "Built with Ruby on Rails and a PostgreSQL database.", 
-            "Omniauth - Multi-platform login.",
-            "Cocoon - dynamic forms.",
-            "SortableJS and Stimulus - drag and drop effects."
-        ]
+        mockup: {
+            url: '/ChartsourceMockups.png',
+            height: '464',
+            width: '500'
+        }
     },
-
     {
-        title: 'Quiz It',
-        titleImg: {
-            url: quizit,
-            height: '80px'
-        },
-        bgImg: {
-            url: quizitBg
-        },
+        title: 'Quiz-it',
+        description: 'Quiz builder for educators to create custom quizzes and track their students scores.',
+        subDescription: 'Create two different styles of multiple choice questions, complete with auto-grading and comments.  Add accounts to your group and share your quizzes at the clock of a button.',
+        details: [
+            {
+                title: 'Sinatra',
+                description: 'Built with Ruby, Sinatra, and vanilla Javascript.'
+            },
+            {
+                title: 'Bcrypt',
+                description: 'Secure user login with the Bcrypt gem.'
+            },
+            {
+                title: 'Dynamic Nested Forms',
+                description: 'Dynamic nested forms built by hand in JavaScript.'
+            }
+        ],
+        codeUrl: 'https://github.com/dirklo/quiz-it-three',
+        liveUrl: 'https://quiz-it-three.herokuapp.com',
         techs: [
-            {name: 'ruby', img: ruby, height: '75px'},
-            {name: 'sinatra', img: sinatra, height: '75px'}
+            {
+                svgUrl: '/rubySvgLogo.svg',
+                altText: 'Ruby Logo'
+            },
+            {
+                svgUrl: '/sinatraSvgLogo.svg',
+                altText: 'Sinatra Logo'
+            },
+            {
+                svgUrl: '/javascriptSvgLogo.svg',
+                altText: 'Javascript Logo'
+            }
         ],
-        links: [
-            {type: 'Code', url: 'https://github.com/dirklo/quiz-it'},
-            {type: 'Demo', url: 'https://youtu.be/_Yxp_dMFs2I'},
-            {type: 'Live App', url: 'https://quiz-it-three.herokuapp.com/'}
-        ],
-        description: "Tool for educators to create their own multiple-choice quizzes and share with their students.",
-        bullets: [
-            "Built with Ruby, Sinatra, and vanilla JavaScript.", 
-            "Bcrypt - Secure user sign-in.", 
-            "Active-Record - Maintains a PostgreSQL database."
-        ]
+        mockup: {
+            url: '/QuizitMockups.png',
+            height: '464',
+            width: '500'
+        }
     },
-
     {
         title: 'Crypto-Search',
-        titleImg: {
-            url: cryptosearch,
-            height: '75px'
-        },
-        bgImg: {
-            url: cryptosearchBg
-        },
+        description: 'Command line tool to search for currrent and historical market data of the top crypto-currencies.',
+        subDescription: 'Search for a list of the top twenty most popular crypto-currencies, and use the menus to view current market data, developer data, historical data and world market data.',
+        details: [
+            {
+                title: 'Ruby',
+                description: 'Built as a gem with Ruby.'
+            },
+            {
+                title: 'Nokogiri',
+                description: 'Implemented web-scraping and api data fetching.'
+            },
+            {
+                title: 'Money and Date gems',
+                description: 'Fully formatted date and money displays,  with full foreign currency support.'
+            }
+        ],
+        codeUrl: 'https://github.com/dirklo/crypto_search_cli',
         techs: [
-            {name: 'ruby', img: ruby, height: '75px'}
+            {
+                svgUrl: '/rubySvgLogo.svg',
+                altText: 'Ruby Logo'
+            }
         ],
-        links: [
-            {type: 'Code', url: 'https://github.com/dirklo/crypto_search_cli'},
-            {type: 'Demo', url: 'https://youtu.be/aHI5HzrzyAk'}
-        ],
-        description: "Command line application to search for current and historical market information on popular cryptocurrencies.",
-        bullets: [
-            "Built with Ruby.", 
-            "Nokogiri - Web-scraping and data population.", 
-            "Money and Date gems - Number, money, and date string formatting."
-        ]
+        mockup: {
+            url: '/CryptosearchMockups.png',
+            height: '325',
+            width: '565'
+        }
     }
 ]
 

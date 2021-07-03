@@ -2,10 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/projects.module.css'
 import mockups from '../../public/PantamMockups.png'
-import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
-import railsSvgLogo from '../../public/railsSvgLogo.svg'
 import { motion } from 'framer-motion'
-
 
 export default function Taskaholik() {
     return (
@@ -67,14 +64,8 @@ export default function Taskaholik() {
                 }}
             >
                 <div className={styles.techlist}>
-                <div className={styles.techlist}>
-                        <div>
-                            <Image src={javascriptSvgLogo} alt="Javascript logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={railsSvgLogo} alt="Rails Logo"></Image>
-                        </div>
-                    </div>
+                    <Image src='/javascriptSvgLogo' width='60' height='60' alt='Javascript logo' />
+                    <Image src='/railsSvgLogo' width='60' height='60' alt='Railslogo' />
                 </div>
                 <Image src={mockups} alt="Taskaholic Mockups" />
             </motion.section>

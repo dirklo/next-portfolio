@@ -65,10 +65,10 @@ export default function Taskaholik() {
                     }}
                 >
                     <div className={styles.techlist}>
-                        <Image src='/javascriptSvgLogo.svg' height='60' width='60' layout='fixed' alt="Javascript logo"></Image>
-                        <Image src='/reactSvgLogo.svg' height='60' width='60' layout='fixed' alt="React logo"></Image>
-                        <Image src='/reduxSvgLogo.svg' height='60' width='60' layout='fixed' alt="Redux logo"></Image>
-                        <Image src='/railsSvgLogo.svg' height='60' width='60' layout='fixed' alt="Rails logo"></Image>
+                        <Image src='/javascriptSvgLogo.svg' height='60' width='60' layout='fixed' alt='Javascript logo' />
+                        <Image src='/reactSvgLogo.svg' height='60' width='60' layout='fixed' alt='React logo' />
+                        <Image src='/reduxSvgLogo.svg' height='60' width='60' layout='fixed' alt='Redux logo' />
+                        <Image src='/railsSvgLogo.svg' height='60' width='60' layout='fixed' alt='Rails logo' />
                     </div>
                     <Image src='/TaskaholikMockups.png' alt='Taskaholic Mockups' height='464' width='500' layout='fixed'/>
                 </motion.section>

@@ -6,7 +6,8 @@ import Taskaholik from '../components/projects/Taskaholik'
 import Pantam from '../components/projects/Pantam'
 import ChartSource from '../components/projects/ChartSource'
 import Quizit from '../components/projects/Quizit'
-import Cryptosearch from '../components/projects/Cryptosearch'
+import projects from '../data/projects'
+import ProjectTemplate from '../components/projects/ProjectTemplate'
 
 export default function Projects() {
 
@@ -17,20 +18,7 @@ export default function Projects() {
     }
 
     const displaySelectedProject = () => {
-        switch (selectedProject) {
-            case 0:
-                return <Taskaholik />
-            case 1:
-                return <Pantam />
-            case 2:
-                return <ChartSource />
-            case 3:
-                return <Quizit />
-            case 4:
-                return <Cryptosearch />
-            default:
-                return "SELECT A PROJECT"
-        }
+        return <ProjectTemplate project={projects[selectedProject]}/>
     }
 
     return (
@@ -92,9 +80,9 @@ export default function Projects() {
                     alt="Cryptosearch Logo"
                 />
             </div>
-                <section className={styles.project_display}>
-                            {displaySelectedProject()}
-                </section>
+            <section className={styles.project_display}>
+                        {displaySelectedProject()}
+            </section>
         </motion.div>
     )
 }
