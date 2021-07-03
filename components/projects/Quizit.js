@@ -1,10 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/projects.module.css'
-import mockups from '../../public/quizitMockups.png'
-import rubySvgLogo from '../../public/rubySvgLogo.svg'
-import sinatraSvgLogo from '../../public/sinatraSvgLogo.svg'
-import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
@@ -69,17 +65,11 @@ export default function Quizit() {
                     }}
                 >
                     <div className={styles.techlist}>
-                        <div>
-                            <Image src={rubySvgLogo} alt="Ruby Logo" />
-                        </div>
-                        <div>
-                            <Image src={sinatraSvgLogo} alt="Sinatra Logo" />
-                        </div>
-                        <div>
-                            <Image src={javascriptSvgLogo} alt="Javascript Logo" />
-                        </div>
+                            <Image src='/rubySvgLogo.svg' alt="Ruby Logo" width='60' height='60' layout='fixed'/>
+                            <Image src='/sinatraSvgLogo.svg' alt="Sinatra Logo" width='60' height='60' layout='fixed'/>
+                            <Image src='/javascriptSvgLogo.svg' alt="Javascript Logo" width='60' height='60' layout='fixed'/>
                     </div>
-                    <Image src={mockups} alt="Taskaholic Mockups" />
+                    <Image src='/quizitMockups.png' alt='Quitiz Mockups' height='464' width='500' layout='fixed'/>
                 </motion.section>
             </div>
         </AnimatePresence>

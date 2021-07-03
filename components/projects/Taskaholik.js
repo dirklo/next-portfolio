@@ -1,11 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/projects.module.css'
-import mockups from '../../public/TaskaholikMockups.png'
-import javascriptSvgLogo from '../../public/javascriptSvgLogo.svg'
-import reactSvgLogo from '../../public/reactSvgLogo.svg'
-import reduxSvgLogo from '../../public/reduxSvgLogo.svg'
-import railsSvgLogo from '../../public/railsSvgLogo.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 
 
@@ -70,20 +65,12 @@ export default function Taskaholik() {
                     }}
                 >
                     <div className={styles.techlist}>
-                        <div>
-                            <Image src={javascriptSvgLogo} alt="Javascript logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={reactSvgLogo} alt="React Logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={reduxSvgLogo} alt="Redux Logo"></Image>
-                        </div>
-                        <div>
-                            <Image src={railsSvgLogo} alt="Rails Logo"></Image>
-                        </div>
+                        <Image src='/javascriptSvgLogo.svg' height='60' width='60' layout='fixed' alt="Javascript logo"></Image>
+                        <Image src='/reactSvgLogo.svg' height='60' width='60' layout='fixed' alt="React logo"></Image>
+                        <Image src='/reduxSvgLogo.svg' height='60' width='60' layout='fixed' alt="Redux logo"></Image>
+                        <Image src='/railsSvgLogo.svg' height='60' width='60' layout='fixed' alt="Rails logo"></Image>
                     </div>
-                    <Image src={mockups} alt="Taskaholic Mockups" />
+                    <Image src='/TaskaholikMockups.png' alt='Taskaholic Mockups' height='464' width='500' layout='fixed'/>
                 </motion.section>
             </div>
         </AnimatePresence>
