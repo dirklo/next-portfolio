@@ -2,11 +2,6 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import styles from '../styles/projects.module.css'
-import taskaholikSvgLogo from '../public/taskaholikSvgLogo.svg'
-import pantamSvgLogo from '../public/pantamSvgLogo.svg'
-import chartsourceSvgLogo from '../public/chartsourceSvgLogo.svg'
-import quizitSvgLogo from '../public/quizitSvgLogo.svg'
-import cryptosearchSvgLogo from '../public/cryptosearchSvgLogo.svg'
 import Taskaholik from '../components/projects/Taskaholik'
 import Pantam from '../components/projects/Pantam'
 import ChartSource from '../components/projects/ChartSource'
@@ -48,35 +43,50 @@ export default function Projects() {
             <div className={styles.project_select}>
                 <Image 
                     className={selectedProject === 0 ? styles.selected : null} 
-                    src={taskaholikSvgLogo} 
+                    src='/taskaholikSvgLogo.svg'
+                    layout='fixed'
+                    height='40' 
+                    width='40' 
                     data-id="0"
                     onClick={(e) => handleClick(e)}
                     alt="Taskaholic Logo"
                 />
                 <Image 
                     className={selectedProject === 1 ? styles.selected : null} 
-                    src={pantamSvgLogo} 
+                    src='/pantamSvgLogo.svg'
+                    layout='fixed'
+                    height='40'
+                    width='40'   
                     data-id="1"
                     onClick={(e) => handleClick(e)}
                     alt="Pantam Logo"
                 />
                 <Image 
                     className={selectedProject === 2 ? styles.selected : null} 
-                    src={chartsourceSvgLogo} 
+                    src='/chartsourceSvgLogo.svg'
+                    layout='fixed'
+                    height='40'
+                    width='40'  
                     data-id="2"
                     onClick={(e) => handleClick(e)}
                     alt="Chartsource Logo"
                 />
-                    <Image 
+                <Image 
                     className={selectedProject === 3 ? styles.selected : null} 
-                    src={quizitSvgLogo} 
+                    src='/quizitSvgLogo.svg'
+                    layout='fixed'
+                    height='40'
+                    width='40'  
                     data-id="3"
                     onClick={(e) => handleClick(e)}
                     alt="Quizit Logo"
                 />
                 <Image 
                     className={selectedProject === 4 ? styles.selected : null} 
-                    src={cryptosearchSvgLogo} 
+                    src='/cryptosearchSvgLogo.svg'
+                    layout='fixed'
+                    height='40'
+                    width='40'  
                     data-id="4"
                     onClick={(e) => handleClick(e)}
                     alt="Cryptosearch Logo"
