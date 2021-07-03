@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import styles from '../styles/projects.module.css'
-import Taskaholik from '../components/projects/Taskaholik'
-import Pantam from '../components/projects/Pantam'
-import ChartSource from '../components/projects/ChartSource'
-import Quizit from '../components/projects/Quizit'
 import projects from '../data/projects'
 import ProjectTemplate from '../components/projects/ProjectTemplate'
 
@@ -15,10 +11,6 @@ export default function Projects() {
     
     const handleClick = (e) => {
         setSelectedProject(Number(e.target.dataset.id))
-    }
-
-    const displaySelectedProject = () => {
-        return <ProjectTemplate project={projects[selectedProject]}/>
     }
 
     return (
@@ -81,7 +73,7 @@ export default function Projects() {
                 />
             </div>
             <section className={styles.project_display}>
-                        {displaySelectedProject()}
+                    <ProjectTemplate key={projects[selectedProject].title} project={projects[selectedProject]}/>
             </section>
         </motion.div>
     )

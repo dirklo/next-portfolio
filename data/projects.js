@@ -1,19 +1,3 @@
-// import taskaholik from '../img/taskaholik.png'
-// import taskaholikBg from '../img/taskaholikBg.png'
-// import pantam from '../img/pantam.png'
-// import pantamBg from '../img/pantamBg.jpg'
-// import chartsource from '../img/chartsource.png'
-// import chartsourceBg from '../img/chartsourceBg.jpg'
-// import quizit from '../img/quizit.png'
-// import quizitBg from '../img/quizitBg.jpg'
-// import cryptosearch from '../img/cryptosearch.png'
-// import cryptosearchBg from '../img/cryptosearchBg.png'
-// import javascript from '../img/javascript.svg'
-// import rails from '../img/rails.png'
-// import ruby from '../img/ruby.svg'
-// import sinatra from '../img/sinatra.png'
-// import react from '../img/react.png'
-
 const projects = [
     {
         title: 'Taskaholik',
