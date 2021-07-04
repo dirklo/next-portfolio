@@ -73,7 +73,10 @@ export default function Projects() {
                 />
             </div>
             <section className={styles.project_display}>
-                    <ProjectTemplate key={projects[selectedProject].title} project={projects[selectedProject]}/>
+                    <ProjectTemplate 
+                        key={projects[selectedProject].title} 
+                        roject={projects[selectedProject]}
+                    />
             </section>
         </motion.div>
     )
