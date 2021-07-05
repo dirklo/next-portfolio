@@ -1,17 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/projects.module.css'
-import { motion } from 'framer-motion'
-
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function ProjectTemplate({ project }) {
     return (
-        <div className={styles.project}>   
+        <motion.div
+            key={project.title} 
+            className={styles.project}
+        >   
             <motion.section 
                 className={styles.left_pane}
                 initial={{ x: -500 }}
                 animate={{ x: 0 }}
-                exit={{y: 1000}}
                 transition={{
                     type: 'spring',
                     duration: .8,
@@ -61,7 +62,6 @@ export default function ProjectTemplate({ project }) {
                 className={styles.right_pane}
                 initial={{ x: 1000 }}
                 animate={{ x: 0 }}
-                exit={{y: 1000}}
                 transition={{
                     type: 'spring',
                     delay: .3,
@@ -89,6 +89,6 @@ export default function ProjectTemplate({ project }) {
                     priority='true'
                 />
             </motion.section>
-        </div>
+        </motion.div>
     )
 }
