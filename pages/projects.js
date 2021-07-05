@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import styles from '../styles/projects.module.css'
 import projects from '../data/projects'
-import ProjectTemplate from '../components/projects/ProjectTemplate'
+import ProjectTemplate from '../components/ProjectTemplate'
 
 export default function Projects() {
 
@@ -75,7 +75,7 @@ export default function Projects() {
             <section className={styles.project_display}>
                     <ProjectTemplate 
                         key={projects[selectedProject].title} 
-                        roject={projects[selectedProject]}
+                        project={projects[selectedProject]}
                     />
             </section>
         </motion.div>

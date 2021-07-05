@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from '../../styles/projects.module.css'
+import styles from '../styles/projects.module.css'
 import { motion } from 'framer-motion'
 
 
@@ -86,6 +86,7 @@ export default function ProjectTemplate({ project }) {
                     height={project.mockup.height} 
                     width={project.mockup.width} 
                     layout='fixed'
+                    priority='true'
                 />
             </motion.section>
         </div>

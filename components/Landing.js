@@ -105,11 +105,13 @@ export default function Landing() {
             >
                 <Image 
                     className={styles.portrait} 
-                    src={portrait} 
+                    src={portrait}
+                    width={525}
+                    height={700} 
                     alt="Main portrait"
-                    layout='intrinsic'
-                    priority
-                    objectPosition = 'right bottom' 
+                    layout='fixed'
+                    priority='true'
+                    quality='50'
                     />
             </motion.div>
         </motion.section>
