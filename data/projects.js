@@ -21,16 +21,16 @@ const projects = [
         liveUrl: 'https://dirklo.github.io/taskaholik-front-end/',
         techs: [
             {
-                svgUrl: '/javascriptSvgLogo.svg',
-                altText: 'Javascript Logo'
-            },
-            {
                 svgUrl: '/reactSvgLogo.svg',
                 altText: 'React Logo'
             },
             {
                 svgUrl: '/reduxSvgLogo.svg',
                 altText: 'Redux Logo'
+            },
+            {
+                svgUrl: '/javascriptSvgLogo.svg',
+                altText: 'Javascript Logo'
             },
             {
                 svgUrl: '/railsSvgLogo.svg',
