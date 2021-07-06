@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
@@ -19,7 +18,7 @@ export default function Projects() {
             className={styles.projects}
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
-            exit={{ y: 1000 }}
+            exit={{ opacity: 0}}
         >
             <div className={styles.project_select}>
                 <Image 
@@ -74,7 +73,9 @@ export default function Projects() {
                 />
             </div>
             {router.query.id ?
-                <section className={styles.project_display}>
+                <section
+                    className={styles.project_display}
+                >
                     <ProjectTemplate 
                         key={projects[router.query.id].title} 
                         project={projects[router.query.id]}

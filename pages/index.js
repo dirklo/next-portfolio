@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Landing from '../components/Landing'
-import { motion } from 'framer-motion'
 
 
 export default function Home() {
