@@ -14,7 +14,7 @@ const projects = [
             },
             {
                 title: 'React-query',
-                description: 'Data fetching and memization.'
+                description: 'Data fetching and memoization.'
             }
         ],
         codeUrl: 'https://github.com/dirklo/taskaholik-front-end',

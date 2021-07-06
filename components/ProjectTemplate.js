@@ -1,19 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/projects.module.css'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function ProjectTemplate({ project }) {
     return (
         <motion.div
             key={project.title} 
             className={styles.project}
-            exit={{ y: 1000 }}
         >   
             <motion.section 
                 className={styles.left_pane}
                 initial={{ x: -500 }}
                 animate={{ x: 0 }}
+                exit={{ x: 1000 }}
                 transition={{
                     type: 'spring',
                     duration: .8,
@@ -25,11 +25,11 @@ export default function ProjectTemplate({ project }) {
                 <p>
                     {project.subDescription}
                     <br /><br />
-                    {project.details.map(detail => 
-                        <>
+                    {project.details.map((detail, index) => 
+                        <span key={index}>
                             <em><b>{detail.title}</b></em> - {detail.description}
                             <br /><br />
-                        </>
+                        </span>
                     )}
                 </p> 
                 <div className={styles.cta_buttons}>

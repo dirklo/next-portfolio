@@ -78,7 +78,7 @@ export default function Projects() {
                     <ProjectTemplate 
                         key={projects[router.query.id].title} 
                         project={projects[router.query.id]}
-                        />
+                    />
                 </section>
             : null
             }

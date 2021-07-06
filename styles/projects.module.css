@@ -89,6 +89,7 @@
     font-weight: normal;
     font-size: 28px;
     line-height: 46px;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .project p {
@@ -97,6 +98,12 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.project p em {
+    font-size: 24px;
+    color: white;
 }
 
 .project .techlist {
