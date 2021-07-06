@@ -19,56 +19,56 @@ export default function Projects() {
             className={styles.projects}
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
-            exit={{ opacity: 0 }}
+            exit={{ y: 1000 }}
         >
             <div className={styles.project_select}>
                 <Image 
-                    className={router.query.id === '0' ? styles.selected : null} 
+                    className={router.query.id === 'taskaholik' ? styles.selected : null} 
                     src='/taskaholikSvgLogo.svg'
                     layout='fixed'
                     height='40' 
                     width='40' 
-                    data-id="0"
+                    data-id="taskaholik"
                     onClick={(e) => handleClick(e)}
                     alt="Taskaholic Logo"
                 />
                 <Image 
-                    className={router.query.id === '1' ? styles.selected : null} 
+                    className={router.query.id === 'pantam' ? styles.selected : null} 
                     src='/pantamSvgLogo.svg'
                     layout='fixed'
                     height='40'
                     width='40'   
-                    data-id="1"
+                    data-id="pantam"
                     onClick={(e) => handleClick(e)}
                     alt="Pantam Logo"
                 />
                 <Image 
-                    className={router.query.id === '2' ? styles.selected : null} 
+                    className={router.query.id === 'chartsource' ? styles.selected : null} 
                     src='/chartsourceSvgLogo.svg'
                     layout='fixed'
                     height='40'
                     width='40'  
-                    data-id="2"
+                    data-id="chartsource"
                     onClick={(e) => handleClick(e)}
                     alt="Chartsource Logo"
                 />
                 <Image 
-                    className={router.query.id === '3' ? styles.selected : null} 
+                    className={router.query.id === 'quizit' ? styles.selected : null} 
                     src='/quizitSvgLogo.svg'
                     layout='fixed'
                     height='40'
                     width='40'  
-                    data-id="3"
+                    data-id="quizit"
                     onClick={(e) => handleClick(e)}
                     alt="Quizit Logo"
                 />
                 <Image 
-                    className={router.query.id === '4' ? styles.selected : null} 
+                    className={router.query.id === 'cryptosearch' ? styles.selected : null} 
                     src='/cryptosearchSvgLogo.svg'
                     layout='fixed'
                     height='40'
                     width='40'  
-                    data-id="4"
+                    data-id="cryptosearch"
                     onClick={(e) => handleClick(e)}
                     alt="Cryptosearch Logo"
                 />

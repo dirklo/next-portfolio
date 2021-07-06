@@ -12,7 +12,6 @@ export default function NavBar() {
         const bar = document.getElementsByClassName(`${styles.bar}`)[0]
         bar.style.left = `${target.offsetLeft}px`;
         bar.style.width = `${target.offsetWidth}px`;
-        console.log(target.offsetWidth)
     }
 
     useEffect(() => {
@@ -37,7 +36,7 @@ export default function NavBar() {
                         Home
                     </a> 
                 </Link>
-                <Link href='/projects/0'>
+                <Link href='/projects/taskaholik'>
                     <a 
                         className={router.pathname.includes('/projects') ? `${styles.active}` : null} 
                     >

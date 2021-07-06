@@ -134,14 +134,22 @@
     color: #FFFFFF;
     padding: 9px 41px;
     border-radius: 50px;
-    margin-right: 10px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
 .project .cta_buttons button:first-child {
-    background: #108090;
+    background: transparent;
+    border: 5px solid #108090;
+    box-shadow: 0px 0px 20px #108090, 
+                inset 0px 0px 20px #108090;
+    text-shadow: 0px 0px 10px #ececec;
 }
 
 .project .cta_buttons button:last-child {
-    background: #8B7FAD;
+    background: transparent;
+    border: 5px solid #8B7FAD;
+    box-shadow: 0px 0px 20px #8B7FAD, 
+                inset 0px 0px 20px #8B7FAD;
+    text-shadow: 0px 0px 10px #ececec;
 }

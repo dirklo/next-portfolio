@@ -1,5 +1,5 @@
-const projects = [
-    {
+const projects = {
+    taskaholik: {
         title: 'Taskaholik',
         description: 'Bug-tracker and team management application built with React and Ruby on Rails',
         subDescription: 'Put together a team, create a project, outline your goals and deadlines, and assign team members.',
@@ -43,7 +43,7 @@ const projects = [
             width: '500'
         }
     },
-    {
+    pantam: {
         title: 'Pantam',
         description: 'Playable, in-browser virtual instrument.  Built with JavaScript, Web Audio API, and Ruby on Rails.',
         subDescription: 'Create and save your own unique scales, and play your custom Hand Pan with your keyboard!',
@@ -79,7 +79,7 @@ const projects = [
             width: '500'
         }
     },
-    {
+    chartsource: {
         title: 'Chart-Source',
         description: 'Library tool for bandleaders to quickly share PDF charts with their team.',
         subDescription: 'Upload your entire sheet music library, organize and create setlists, and share with your team at the click of a button!',
@@ -123,7 +123,7 @@ const projects = [
             width: '500'
         }
     },
-    {
+    quizit: {
         title: 'Quiz-it',
         description: 'Quiz builder for educators to create custom quizzes and track their students scores.',
         subDescription: 'Create two different styles of multiple choice questions, complete with auto-grading and comments.  Add accounts to your group and share your quizzes at the clock of a button.',
@@ -163,7 +163,7 @@ const projects = [
             width: '500'
         }
     },
-    {
+    cryptosearch: {
         title: 'Crypto-Search',
         description: 'Command line tool to search for currrent and historical market data of the top crypto-currencies.',
         subDescription: 'Search for a list of the top twenty most popular crypto-currencies, and use the menus to view current market data, developer data, historical data and world market data.',
@@ -194,6 +194,6 @@ const projects = [
             width: '565'
         }
     }
-]
+}
 
 export default projects
