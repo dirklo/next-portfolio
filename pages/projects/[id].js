@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
-import styles from '../styles/projects.module.css'
-import projects from '../data/projects'
-import ProjectTemplate from '../components/ProjectTemplate'
+import styles from '../../styles/projects.module.css'
+import projects from '../../data/projects'
+import ProjectTemplate from '../../components/ProjectTemplate'
 
 export default function Projects() {
 
-    const [selectedProject, setSelectedProject] = useState(0)
-    
+    const router = useRouter()
+
     const handleClick = (e) => {
-        setSelectedProject(Number(e.target.dataset.id))
+        router.push(`/projects/${e.target.dataset.id}`)
     }
 
     return (
@@ -22,7 +23,7 @@ export default function Projects() {
         >
             <div className={styles.project_select}>
                 <Image 
-                    className={selectedProject === 0 ? styles.selected : null} 
+                    className={router.query.id === '0' ? styles.selected : null} 
                     src='/taskaholikSvgLogo.svg'
                     layout='fixed'
                     height='40' 
@@ -32,7 +33,7 @@ export default function Projects() {
                     alt="Taskaholic Logo"
                 />
                 <Image 
-                    className={selectedProject === 1 ? styles.selected : null} 
+                    className={router.query.id === '1' ? styles.selected : null} 
                     src='/pantamSvgLogo.svg'
                     layout='fixed'
                     height='40'
@@ -42,7 +43,7 @@ export default function Projects() {
                     alt="Pantam Logo"
                 />
                 <Image 
-                    className={selectedProject === 2 ? styles.selected : null} 
+                    className={router.query.id === '2' ? styles.selected : null} 
                     src='/chartsourceSvgLogo.svg'
                     layout='fixed'
                     height='40'
@@ -52,7 +53,7 @@ export default function Projects() {
                     alt="Chartsource Logo"
                 />
                 <Image 
-                    className={selectedProject === 3 ? styles.selected : null} 
+                    className={router.query.id === '3' ? styles.selected : null} 
                     src='/quizitSvgLogo.svg'
                     layout='fixed'
                     height='40'
@@ -62,7 +63,7 @@ export default function Projects() {
                     alt="Quizit Logo"
                 />
                 <Image 
-                    className={selectedProject === 4 ? styles.selected : null} 
+                    className={router.query.id === '4' ? styles.selected : null} 
                     src='/cryptosearchSvgLogo.svg'
                     layout='fixed'
                     height='40'
@@ -72,12 +73,15 @@ export default function Projects() {
                     alt="Cryptosearch Logo"
                 />
             </div>
-            <section className={styles.project_display}>
+            {router.query.id ?
+                <section className={styles.project_display}>
                     <ProjectTemplate 
-                        key={projects[selectedProject].title} 
-                        project={projects[selectedProject]}
-                    />
-            </section>
+                        key={projects[router.query.id].title} 
+                        project={projects[router.query.id]}
+                        />
+                </section>
+            : null
+            }
         </motion.div>
     )
 }

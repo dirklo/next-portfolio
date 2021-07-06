@@ -37,9 +37,9 @@ export default function NavBar() {
                         Home
                     </a> 
                 </Link>
-                <Link href='/projects'>
+                <Link href='/projects/0'>
                     <a 
-                        className={router.pathname == '/projects' ? `${styles.active}` : null} 
+                        className={router.pathname.includes('/projects') ? `${styles.active}` : null} 
                     >
                         Projects
                     </a> 

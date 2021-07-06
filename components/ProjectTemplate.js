@@ -8,6 +8,7 @@ export default function ProjectTemplate({ project }) {
         <motion.div
             key={project.title} 
             className={styles.project}
+            exit={{ y: 1000 }}
         >   
             <motion.section 
                 className={styles.left_pane}
