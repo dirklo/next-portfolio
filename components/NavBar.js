@@ -43,6 +43,13 @@ export default function NavBar() {
                         Projects
                     </a> 
                 </Link>
+                <Link href='/blog'>
+                    <a 
+                        className={router.pathname == '/blog' ? `${styles.active}` : null} 
+                    >
+                        Blog
+                    </a> 
+                </Link>
                 <Link href='/about'>
                     <a 
                         className={router.pathname == '/about' ? `${styles.active}` : null} 

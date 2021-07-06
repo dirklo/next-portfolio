@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
@@ -6,11 +7,11 @@ import projects from '../../data/projects'
 import ProjectTemplate from '../../components/ProjectTemplate'
 
 export default function Projects() {
-
+    
     const router = useRouter()
 
     const handleClick = (e) => {
-        router.push(`/projects/${e.target.dataset.id}`)
+            router.push(`/projects/${e.target.dataset.id}`)
     }
 
     return (
