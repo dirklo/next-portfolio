@@ -38,7 +38,7 @@ const projects = {
             }
         ],
         mockup: {
-            url: '/TaskaholikMockups.png',
+            url: '/taskaholikMockups.png',
             height: '464',
             width: '500'
         }
@@ -74,7 +74,7 @@ const projects = {
             }
         ],
         mockup: {
-            url: '/PantamMockups.png',
+            url: '/pantamMockups.png',
             height: '464',
             width: '500'
         }
@@ -118,7 +118,7 @@ const projects = {
             }
         ],
         mockup: {
-            url: '/ChartsourceMockups.png',
+            url: '/chartsourceMockups.png',
             height: '464',
             width: '500'
         }
@@ -158,7 +158,7 @@ const projects = {
             }
         ],
         mockup: {
-            url: '/QuizitMockups.png',
+            url: '/quizitMockups.png',
             height: '464',
             width: '500'
         }
@@ -189,7 +189,7 @@ const projects = {
             }
         ],
         mockup: {
-            url: '/CryptosearchMockups.png',
+            url: '/cryptosearchMockups.png',
             height: '325',
             width: '565'
         }
