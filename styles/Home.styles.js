@@ -1,3 +1,6 @@
+import css from 'styled-jsx/css'
+
+export default css.resolve`
 .container {
   position: relative;
   min-height: 100vh;
@@ -14,3 +17,4 @@
 .main {
   width: 100%;
 }
+`

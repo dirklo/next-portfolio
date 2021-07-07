@@ -13,12 +13,10 @@ export default function blog(props) {
 
     const featureBlurb = parseHTMLString(props.data.items[0].content)[1].props.children
     const remainingPosts = props.data.items.slice(1) 
-    console.log(remainingPosts)   
 
     return (
         <motion.div
             className={`${styledJsx.className} blog`}
-            style={{ width: '100%' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
