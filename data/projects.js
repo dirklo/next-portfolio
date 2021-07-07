@@ -126,7 +126,7 @@ const projects = {
     quizit: {
         title: 'Quiz-it',
         description: 'Quiz builder for educators to create custom quizzes and track their students scores.',
-        subDescription: 'Create two different styles of multiple choice questions, complete with auto-grading and comments.  Add accounts to your group and share your quizzes at the clock of a button.',
+        subDescription: 'Create two different styles of multiple choice questions, complete with auto-grading and comments.  Add accounts to your group and share your quizzes at the click of a button.',
         details: [
             {
                 title: 'Sinatra',
