@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from '../styles/projects.module.css'
+import styledJsx from '../styles/projects.styles.js'
 import { motion } from 'framer-motion'
 
 export default function ProjectTemplate({ project }) {
@@ -8,10 +8,10 @@ export default function ProjectTemplate({ project }) {
     return (
         <motion.div
             key={project.title} 
-            className={styles.project}
+            className={`${styledJsx.className} project`}
         >   
             <motion.section 
-                className={styles.left_pane}
+                className={`${styledJsx.className} left_pane`}
                 initial={{ x: -500 }}
                 animate={{ x: 0 }}
                 transition={{
@@ -32,7 +32,7 @@ export default function ProjectTemplate({ project }) {
                         </span>
                     )}
                 </p> 
-                <div className={styles.cta_buttons}>
+                <div className={`${styledJsx.className} cta_buttons`}>
                     <motion.button
                         type="button"
                         onClick={() => {
@@ -60,7 +60,7 @@ export default function ProjectTemplate({ project }) {
                 </div>
             </motion.section>
             <motion.section 
-                className={styles.right_pane}
+                className={`${styledJsx.className} right_pane`}
                 initial={{ x: 1000 }}
                 animate={{ x: 0 }}
                 transition={{
@@ -69,7 +69,7 @@ export default function ProjectTemplate({ project }) {
                     duration: .6
                 }}
             >
-                <div className={styles.techlist}>
+                <div className={`${styledJsx.className} techlist`}>
                     {project.techs.map((tech, index) => 
                         <Image 
                             src={tech.svgUrl}
