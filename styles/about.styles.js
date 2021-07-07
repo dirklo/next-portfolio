@@ -12,10 +12,24 @@ export default css.resolve`
         align-items: center;
     }
 
-    .about_h1 {
-        color: white;
-        font-size: 32px;
+    .avatar_container {
+        position: relative;
+        width: 200px;
+        height: 150px;
     }
+
+    .about_h1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-size: 42px;
+        text-shadow: 0px 0px 5px black;
+    }
+
 
     .story_list {
         width: 100%
@@ -53,12 +67,6 @@ export default css.resolve`
     .story_card_image_container {
         position: relative;
         width: 200px;
-        height: 150px;
-    }
-
-    .avatar_container {
-        position: relative;
-        width: 150px;
         height: 150px;
     }
 `

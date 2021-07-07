@@ -12,9 +12,6 @@ export default function StoryContainer() {
             exit={{ opacity: 0 }} 
             className={`${styledJsx.className} about`}
         >
-            <h1 className={`${styledJsx.className} about_h1`}>
-                My Story
-            </h1>
             <div className={`${styledJsx.className} avatar_container`}>
                 <Image
                     src='/rick-avatar.svg'
@@ -22,6 +19,9 @@ export default function StoryContainer() {
                     layout='fill'
                     objectFit='contain'
                 />
+                <h1 className={`${styledJsx.className} about_h1`}>
+                    My Story
+                </h1>
             </div>
             <div className={`${styledJsx.className} story_list`}>
                 {stories.map((story, index) => 
