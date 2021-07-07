@@ -20,20 +20,21 @@ export default function ProjectTemplate({ project }) {
                     staggerChildren: 0.5
                 }}
             >
-                <h1>{project.title}</h1>
-                <h2>{project.description}</h2>
-                <p>
+                <h1 className={`${styledJsx.className} project_h1`}>{project.title}</h1>
+                <h2 className={`${styledJsx.className} project_h2`}>{project.description}</h2>
+                <p className={`${styledJsx.className} project_p`}>
                     {project.subDescription}
                     <br /><br />
                     {project.details.map((detail, index) => 
                         <span key={index}>
-                            <em><b>{detail.title}</b></em> - {detail.description}
+                            <em className={`${styledJsx.className} project_p_em`}><b>{detail.title}</b></em> - {detail.description}
                             <br /><br />
                         </span>
                     )}
                 </p> 
                 <div className={`${styledJsx.className} cta_buttons`}>
                     <motion.button
+                        className={`${styledJsx.className} cta_buttons_button button_1`}
                         type="button"
                         onClick={() => {
                             window.open(`${project.codeUrl}`, '_blank')
@@ -46,6 +47,7 @@ export default function ProjectTemplate({ project }) {
                     {   
                         project.liveUrl ? 
                             <motion.button
+                                className={`${styledJsx.className} cta_buttons_button button_2`}
                                 type="button"
                                 onClick={() => {
                                     window.open(`${project.liveUrl}`, '_blank')
@@ -71,14 +73,15 @@ export default function ProjectTemplate({ project }) {
             >
                 <div className={`${styledJsx.className} techlist`}>
                     {project.techs.map((tech, index) => 
-                        <Image 
-                            src={tech.svgUrl}
-                            key={index} 
-                            height='60' 
-                            width='60' 
-                            layout='fixed' 
-                            alt={tech.altText}
-                        />
+                        <div className={`${styledJsx.className} techlist_item`} key={index} >
+                            <Image
+                                src={tech.svgUrl}
+                                height='60' 
+                                width='60' 
+                                layout='fixed' 
+                                alt={tech.altText}
+                            />
+                        </div>
                     )}
                 </div>
                 <Image 

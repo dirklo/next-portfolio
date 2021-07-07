@@ -6,7 +6,7 @@ export default css.resolve`
         position: relative;
         width: 100%;
         max-width: 1320px;
-        margin-top: 100px;
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,27 +25,23 @@ export default css.resolve`
         border-radius: 100px;
     }
 
+    .projects_h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: white;
+    }
+
     .project_select_icon {
+        position: relative;
         height: 40px;
         width: 40px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
 
-    .project_select_icon:hover {
-        transform: scale(1.1);
-    }
-
-    .project_select_icon {
-        transition: all .3s ease-in-out;
-    }
-
     .selected {
         filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
-    }
-
-    .project_select_icon > img:hover {
-        filter: invert(1); 
     }
 
     .project_display {
@@ -75,7 +71,7 @@ export default css.resolve`
         align-items: center;
     }
 
-    .project h1 {
+    .project_h1 {
         font-family: Spartan;
         font-style: normal;
         font-weight: bold;
@@ -86,7 +82,7 @@ export default css.resolve`
         margin-bottom: 0;
     }
 
-    .project h2 {
+    .project_h2 {
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -95,7 +91,7 @@ export default css.resolve`
         color: rgba(255, 255, 255, 0.4);
     }
 
-    .project p {
+    .project_p {
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
@@ -104,12 +100,12 @@ export default css.resolve`
         color: rgba(255, 255, 255, 0.4);
     }
 
-    .project p em {
+    .project_p_em {
         font-size: 24px;
         color: white;
     }
 
-    .project .techlist {
+    .techlist {
         margin: 50px 0;
         display: flex;
         flex-direction: row;
@@ -117,15 +113,15 @@ export default css.resolve`
         align-items: center;
     }
 
-    .project .techlist div {
+    .techlist_item {
         margin: 0 10px;
     }
 
-    .project .cta_buttons {
+    .cta_buttons {
         margin-top: 50px;
     }
 
-    .project .cta_buttons button {
+    .cta_buttons_button {
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
@@ -141,7 +137,7 @@ export default css.resolve`
         cursor: pointer;
     }
 
-    .project .cta_buttons button:first-child {
+    .button_1 {
         background: transparent;
         border: 5px solid #108090;
         box-shadow: 0px 0px 20px #108090, 
@@ -149,7 +145,7 @@ export default css.resolve`
         text-shadow: 0px 0px 10px #ececec;
     }
 
-    .project .cta_buttons button:last-child {
+    .button_2 {
         background: transparent;
         border: 5px solid #8B7FAD;
         box-shadow: 0px 0px 20px #8B7FAD, 

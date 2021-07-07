@@ -30,24 +30,35 @@ export default function Projects() {
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0}}
         >
+            <h2 className={`${styledJsx.className} projects_h2`}> 
+                Select a Project 
+            </h2>
             <div className={`${styledJsx.className} project_select`}>
                 {projectsArray(projects).map(project => {
                     const slug = project.title.toLowerCase().split('-').join('')
                     return (
-                        <Image
-                            className={router.query.id === slug ? 
-                                `${styledJsx.className} project_select_icon selected` : 
-                                `${styledJsx.className} project_select_icon`
-                            }
-                            key={project.title}
-                            src={`/${slug}SvgLogo.svg`}
-                            layout='fixed'
-                            height='40' 
-                            width='40' 
-                            data-id={slug}
-                            onClick={(e) => handleClick(e)}
-                            alt={`${project.title} Logo`}
-                        />
+                        <motion.div 
+                            key={project.title} 
+                            className={`${styledJsx.className} project_select_icon`}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ 
+                                scale: 0.9, 
+                                transition: { duration: 0 }
+                            }}
+                        >
+                            <Image
+                                className={router.query.id === slug ? 
+                                    `${styledJsx.className} selected` : null
+                                }
+                                
+                                src={`/${slug}SvgLogo.svg`}
+                                layout='fill'
+                                objectFit='contain'
+                                data-id={slug}
+                                onClick={(e) => handleClick(e)}
+                                alt={`${project.title} Logo`}
+                            />
+                        </motion.div>
                     )
                 })}
             </div>
