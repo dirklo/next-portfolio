@@ -7,6 +7,9 @@ export default function ProjectTemplate({ project }) {
 
     return (
         <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             key={project.title} 
             className={`${styledJsx.className} project`}
         >   
@@ -14,6 +17,7 @@ export default function ProjectTemplate({ project }) {
                 className={`${styledJsx.className} left_pane`}
                 initial={{ x: -500 }}
                 animate={{ x: 0 }}
+                exit={{ opacity: 0 }}
                 transition={{
                     type: 'spring',
                     duration: .8,
@@ -65,6 +69,7 @@ export default function ProjectTemplate({ project }) {
                 className={`${styledJsx.className} right_pane`}
                 initial={{ x: 1000 }}
                 animate={{ x: 0 }}
+                exit={{ opacity: 0 }}
                 transition={{
                     type: 'spring',
                     delay: .3,
