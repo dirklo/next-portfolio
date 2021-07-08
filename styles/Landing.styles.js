@@ -17,7 +17,7 @@ export default css.resolve`
         opacity: 1;
         z-index: 1;
     }
-    .name_div .portrait {
+    .portrait {
         position: relative;
         z-index: 1;
         pointer-events: none;
@@ -48,13 +48,13 @@ export default css.resolve`
         width: 600px;
         letter-spacing: .1em;
     }
-    .name_div .social_bar {
+    .social_bar {
         height: 5px;
         width: 100px;
         border-radius: 20px;
         background-color: rgb(104, 111, 239);
     }
-    .name_div > .rect {
+    .rect {
         position: absolute;
         inset: 0px;
         height: 250px;

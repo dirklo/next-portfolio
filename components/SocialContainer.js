@@ -1,34 +1,50 @@
 import React from 'react'
-import styles from '../styles/SocialContainer.module.css'
+import socialContainerStyles from '../styles/SocialContainer.styles'
 import Image from 'next/image'
-import github from '../public/github.svg'
-import linkedin from '../public/linkedin.svg'
-import twitter from '../public/twitter.svg'
 
 function SocialContainer() {
     return (
-        <div className={styles.social_container}>
+        <div className={`${socialContainerStyles.className} social_container`}>
             <a 
                 href="https://github.com/dirklo" 
                 target="_blank" 
                 rel="noreferrer"
             >
-                <Image src={github} alt="github link" />
+                <Image 
+                    src='/github.svg' 
+                    alt="Github Link"
+                    layout='fixed'
+                    height='64' 
+                    width='64' 
+                />
             </a>
             <a 
                 href="https://www.linkedin.com/in/rick-moore-5b587a99/" 
                 target="_blank" 
                 rel="noreferrer"
             >
-                <Image src={linkedin} alt="linkedin link" />
+                <Image 
+                    src='/linkedin.svg' 
+                    alt="linkedin link" 
+                    layout='fixed'
+                    height='64' 
+                    width='64' 
+                />
             </a>
             <a 
                 href="https://twitter.com/rickstachemoore" 
                 target="_blank" 
                 rel="noreferrer"
             >
-                <Image src={twitter} alt="twitter link" />
+                <Image 
+                    src='/twitter.svg' 
+                    alt="twitter link" 
+                    layout='fixed'
+                    height='64' 
+                    width='64'     
+                />
             </a>
+            {socialContainerStyles.styles}
         </div>
     )
 }
