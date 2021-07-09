@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion'
@@ -44,7 +44,7 @@ export default function Projects() {
 
     return (
         <motion.div
-        className={`${styledJsx.className} projects`}
+            className={`${styledJsx.className} projects`}
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0}}
@@ -69,7 +69,6 @@ export default function Projects() {
                                 className={router.query.id === slug ? 
                                     `${styledJsx.className} selected` : null
                                 }
-                                
                                 src={`/${slug}SvgLogo.svg`}
                                 layout='fill'
                                 objectFit='contain'
@@ -95,7 +94,7 @@ export default function Projects() {
                 </motion.section>
             : null
             }
-        {styledJsx.styles}
+            {styledJsx.styles}
         </motion.div>
     )
 }

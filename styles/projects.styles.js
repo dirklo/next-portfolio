@@ -39,6 +39,10 @@ export default css.resolve`
         transition: all 0.3s ease-in-out;
     }
 
+    .project_select_icon:hover {
+        filter: invert(1) sepia(1) brightness(1000%);
+    }
+
     .selected {
         filter: invert(.5) sepia(1) saturate(19.5) brightness(1000%) hue-rotate(1deg);   
     }
