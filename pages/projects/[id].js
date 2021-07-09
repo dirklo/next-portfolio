@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import styledJsx from '../../styles/projects.styles'
 import projects from '../../data/projects'
 import ProjectTemplate from '../../components/ProjectTemplate'
@@ -9,10 +9,29 @@ import ProjectTemplate from '../../components/ProjectTemplate'
 export default function Projects() {
     
     const router = useRouter()
+    const controls = useAnimation();
 
     const handleClick = (e) => {
-        router.push(`/projects/${e.target.dataset.id}`)
+        controls.start('hidden')
+        setTimeout(() => {
+            controls.start('visible')
+            router.push(`/projects/${e.target.dataset.id}`)
+        }, 500)
     }
+
+    const zoomOut = {
+        hidden: {
+            opacity: 0,
+            y: 500,
+            transition: { duration: .5 }
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0 }
+        }
+    };
+
 
     const projectsArray = (projects) => {
         const result = []
@@ -63,14 +82,17 @@ export default function Projects() {
                 })}
             </div>
             {router.query.id ?
-                <section
-                className={`${styledJsx.className} projectDisplay`}
+                <motion.section
+                    className={`${styledJsx.className} projectDisplay`}
+                    variants={zoomOut}
+                    initial='visible'
+                    animate={controls}
                 >
                     <ProjectTemplate 
                         key={projects[router.query.id].title} 
                         project={projects[router.query.id]}
                     />
-                </section>
+                </motion.section>
             : null
             }
         {styledJsx.styles}
