@@ -6,6 +6,7 @@ function SocialContainer() {
     return (
         <div className={`${socialContainerStyles.className} social_container`}>
             <a 
+                className={socialContainerStyles.className}
                 href="https://github.com/dirklo" 
                 target="_blank" 
                 rel="noreferrer"
@@ -19,6 +20,7 @@ function SocialContainer() {
                 />
             </a>
             <a 
+                className={socialContainerStyles.className}
                 href="https://www.linkedin.com/in/rick-moore-5b587a99/" 
                 target="_blank" 
                 rel="noreferrer"
@@ -32,6 +34,7 @@ function SocialContainer() {
                 />
             </a>
             <a 
+                className={socialContainerStyles.className}
                 href="https://twitter.com/rickstachemoore" 
                 target="_blank" 
                 rel="noreferrer"

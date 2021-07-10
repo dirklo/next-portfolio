@@ -11,7 +11,6 @@ export default css.resolve`
     }
 
     a {
-        background: red;
         height: 64;
         width: 64;
         transition: all 0.3s ease-in-out
