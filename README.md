@@ -1,3 +1,7 @@
+# Portfolio page for Rick Moore
+
+## Built with React and NextJS
+
 ## Getting Started
 
 First, run the development server:
