@@ -56,7 +56,7 @@ export default css.resolve`
 
     .feature_title_h2 {
         margin-top: 0;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .remaining_posts_container {
@@ -103,6 +103,8 @@ export default css.resolve`
         margin-bottom: 0;
         padding: 10px;
         font-size: 20px;
+        color: black;
+        text-shadow: 0px 0px 3px white;
         text-align: center;
         background-color: gold;
         z-index: 1;
