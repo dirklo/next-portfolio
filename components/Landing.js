@@ -4,6 +4,7 @@ import Image from 'next/image'
 import SocialContainer from './SocialContainer'
 import { motion } from 'framer-motion'
 import styledJsx from '../styles/Landing.styles'
+import Link from 'next/link'
 
 export default function Landing() {
     return (
@@ -86,6 +87,11 @@ export default function Landing() {
                 >    
                     <SocialContainer />
                 </motion.div>
+                <Link href="/projects">
+                    <a className={`${styledJsx.className} cta_button`}>
+                        Go! --&gt;
+                    </a>
+                </Link>
             </div>
             <motion.div 
                 className={`${styledJsx.className} portrait_div`}

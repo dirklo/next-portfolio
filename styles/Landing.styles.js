@@ -74,4 +74,10 @@ export default css.resolve`
             transform: rotateZ(360deg) rotate(-45deg); 
         }
     }
+    .cta_button {
+        border: 5px solid black;
+        border-radius: 10px;
+        background: rgba(0,255,00,0.5);
+        padding: 10px 20px;
+    }
 `
