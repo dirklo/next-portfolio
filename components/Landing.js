@@ -89,7 +89,7 @@ export default function Landing() {
                 </motion.div>
                 <Link href="/projects">
                     <a className={`${styledJsx.className} cta_button`}>
-                        Go! --&gt;
+                        Let&apos;s Go! --&gt;
                     </a>
                 </Link>
             </div>
