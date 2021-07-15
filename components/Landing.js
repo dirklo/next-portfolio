@@ -87,10 +87,26 @@ export default function Landing() {
                 >    
                     <SocialContainer />
                 </motion.div>
-                <Link href="/projects">
-                    <a className={`${styledJsx.className} cta_button`}>
+                <Link href="/projects" passHref>
+                    <motion.a 
+                        className={`${styledJsx.className} cta_button`}
+                        initial="moved" 
+                        animate="positioned"
+                        variants={{
+                            moved: {
+                                y: 500
+                            },
+                            positioned: {
+                                y: 0,
+                                transition: {
+                                    delay: .5,
+                                    duration: .6
+                                }
+                            }
+                        }}
+                    >
                         Let&apos;s Go! --&gt;
-                    </a>
+                    </motion.a>
                 </Link>
             </div>
             <motion.div 

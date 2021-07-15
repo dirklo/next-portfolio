@@ -75,9 +75,12 @@ export default css.resolve`
         }
     }
     .cta_button {
-        border: 5px solid black;
+        border: 5px solid white;
         border-radius: 10px;
         background: rgba(0,255,00,0.5);
         padding: 10px 20px;
+        font-weight: 'bold';
+        font-size: 30px;
+        letter-spacing: 10px;
     }
 `
