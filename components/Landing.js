@@ -105,7 +105,7 @@ export default function Landing() {
                             }
                         }}
                     >
-                        Let&apos;s Go! --&gt;
+                        Let&apos;s Go! -&gt;
                     </motion.a>
                 </Link>
             </div>
