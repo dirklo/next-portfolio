@@ -87,7 +87,7 @@ export default function Landing() {
                 >    
                     <SocialContainer />
                 </motion.div>
-                <Link href="/projects" passHref>
+                {/* <Link href="/projects" passHref>
                     <motion.a 
                         className={`${styledJsx.className} cta_button`}
                         initial="moved" 
@@ -107,7 +107,7 @@ export default function Landing() {
                     >
                         Let&apos;s Go! -&gt;
                     </motion.a>
-                </Link>
+                </Link> */}
             </div>
             <motion.div 
                 className={`${styledJsx.className} portrait_div`}
