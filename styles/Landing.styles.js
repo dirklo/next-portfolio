@@ -34,7 +34,7 @@ export default css.resolve`
         align-items: center;
         z-index: 1;
     }
-    .name_h1 {
+    h1 {
         position: relative;
         margin: 0;
         margin-top: 30px;
@@ -44,7 +44,7 @@ export default css.resolve`
         text-shadow: 0px 2px 10px black;
         text-align: center;
     }
-    .name_h2 {
+    h2 {
         width: 600px;
         letter-spacing: .1em;
     }
