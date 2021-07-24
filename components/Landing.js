@@ -7,6 +7,12 @@ import styledJsx from '../styles/Landing.styles'
 
 export default function Landing() {
 
+    export function getStaticProps() {
+        return (
+          {props: {}}
+        )
+      }
+
     const buildVariants = (startPos, delay) => {
         return {
             moved: startPos,
