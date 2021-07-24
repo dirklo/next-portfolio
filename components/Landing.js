@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import portrait from '../public/portrait.png'
 import Image from 'next/image'
 import SocialContainer from './SocialContainer'
 import { motion } from 'framer-motion'
 import styledJsx from '../styles/Landing.styles'
 
-export default function Landing() {
+export function getStaticProps() {
+    return (
+      {props: {}}
+    )
+}
 
-    export function getStaticProps() {
-        return (
-          {props: {}}
-        )
-      }
+export default function Landing() {
+    const [imgLoaded, setImgLoaded] = useState(false)
 
     const buildVariants = (startPos, delay) => {
         return {
@@ -79,8 +80,8 @@ export default function Landing() {
                     height={700} 
                     alt="Main portrait"
                     layout='fixed'
-                    priority='true'
                     quality='50'
+                    priority
                 />
             </motion.div>
             {styledJsx.styles}

@@ -114,7 +114,7 @@ export default function ProjectTemplate({ project }) {
                     height={project.mockup.height} 
                     width={project.mockup.width} 
                     layout='fixed'
-                    priority='true'
+                    priority
                 />
             </motion.section>
         </motion.div>
