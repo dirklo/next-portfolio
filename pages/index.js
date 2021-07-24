@@ -1,6 +1,11 @@
 import Head from 'next/head'
 import Landing from '../components/Landing'
 
+export function getStaticProps() {
+  return (
+    {props: {}}
+  )
+}
 
 export default function Home() {
   return (
