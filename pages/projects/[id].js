@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion'
 import styledJsx from '../../styles/projects.styles'
-import projects from '../../data/projects'
+import projects from '../../data/projects.json'
 import ProjectTemplate from '../../components/ProjectTemplate'
 
 export default function Projects() {
@@ -32,14 +32,9 @@ export default function Projects() {
         }
     };
 
-
-    const projectsArray = (projects) => {
-        const result = []
-        
-        for (let project in projects) {
-            result.push(projects[project])
-        }
-        return result
+    const selectedProject = () => {
+        const id = router.query.id 
+        return projects.filter(project => id === project.slug)[0]
     }
 
     return (
@@ -53,11 +48,10 @@ export default function Projects() {
                 Select a Project 
             </h2>
             <div className={`${styledJsx.className} project_select`}>
-                {projectsArray(projects).map(project => {
-                    const slug = project.title.toLowerCase().split('-').join('')
+                {projects.map(project => {
                     return (
                         <motion.div 
-                            key={project.title} 
+                            key={project.slug} 
                             className={`${styledJsx.className} project_select_icon`}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ 
@@ -66,13 +60,13 @@ export default function Projects() {
                             }}
                         >
                             <Image
-                                className={router.query.id === slug ? 
+                                className={router.query.id === project.slug ? 
                                     `${styledJsx.className} selected` : null
                                 }
-                                src={`/${slug}SvgLogo.svg`}
+                                src={`/${project.slug}SvgLogo.svg`}
                                 layout='fill'
                                 objectFit='contain'
-                                data-id={slug}
+                                data-id={project.slug}
                                 onClick={(e) => handleClick(e)}
                                 alt={`${project.title} Logo`}
                             />
@@ -88,8 +82,8 @@ export default function Projects() {
                     animate={controls}
                 >
                     <ProjectTemplate 
-                        key={projects[router.query.id].title} 
-                        project={projects[router.query.id]}
+                        key={selectedProject().slug} 
+                        project={selectedProject()}
                     />
                 </motion.section>
             : null
