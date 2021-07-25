@@ -14,9 +14,10 @@ export default css.resolve`
     }
 
     .left_pane {
-        background: linear-gradient(to bottom, rgb(40, 0, 88), rgb(0, 0, 66));
+        background: linear-gradient(to bottom, rgb(10, 1, 20), rgb(2, 2, 20));
         width: 30%;
         height: 100%;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.716);
     }
 
     .right_pane {
@@ -25,30 +26,25 @@ export default css.resolve`
     }
     
     .profile_div {
+        margin-bottom: 12px;
+        height: 257px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
     
-    .profile_image {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-    
     .profile_name_div {
         position: relative;
-        width: 250px;
+        width: 257px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 
     .profile_name {
+        margin-top: 28px;
         margin-bottom: 0;
         font-size: 36px;
         color: white;
@@ -57,13 +53,26 @@ export default css.resolve`
     
     .profile_subtitle {
         margin-top: 0;
+        padding: 24px;
         font-size: 24px;
         color: rgb(117, 117, 117);
         text-align: center;
     }
 
-    .description {
-        color: rgb(101, 101, 101);
-        padding: 10px;
-    } 
+    .resume_card {
+        padding: 0 24px;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .resume_card_span {
+        color: rgb(166, 166, 166);
+        font-size: 12px;
+        text-align: right;
+        line-height: 2em;
+        padding-right: 24px;
+    }
 `

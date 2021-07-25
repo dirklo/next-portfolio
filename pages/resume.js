@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import styledJsx from '../styles/resume.styles'
+import { GiTeamIdea, GiTeamUpgrade, GiDiploma } from 'react-icons/gi'
+import { FaLaptopCode } from 'react-icons/fa'
 
 
 export default function resume() {
@@ -18,16 +20,13 @@ export default function resume() {
                     <div
                         className={`${styledJsx.className} profile_div`}
                     >
-                        <div
-                            className={`${styledJsx.className} profile_image`}
-                            >
-                            <Image 
-                                alt='Profile'
-                                src='/profile.jpg'
-                                layout='fill'
-                                objectFit='contain'
-                                />
-                        </div>
+                        <Image 
+                            alt='Profile'
+                            src='/profile2.jpg'
+                            layout='intrinsic'
+                            width='193'
+                            height='257'
+                            />
                         <div 
                             className={`${styledJsx.className} profile_name_div`}
                         >
@@ -43,9 +42,52 @@ export default function resume() {
                             </h2>
                         </div>
                     </div>
-                    <p
-                        className={`${styledJsx.className} description`}
-                    >Dedicated to finding unique solutions to the challenges facing businesses today.  Proven success in team engagement and empowerment.  Passionate about learning new technologies and creating diverse, superstar teams to simplify solutions and create unforgettable user experiences.  Committed to engineering best practices and creating clean, maintainable code, and rock-solid back end designs for scalable and dependable software</p>
+                    <div
+                        className={`${styledJsx.className} resume_card`}
+                    >
+                        <span
+                            className={`${styledJsx.className} resume_card_span`}
+                        >
+                            Dedicated to finding unique solutions to the challenges facing businesses today.
+                        </span>
+                        <GiTeamIdea color="white" size="4em" />
+                    </div>
+                    <hr />
+                    <div
+                        className={`${styledJsx.className} resume_card`}
+                    >
+                        <span
+                            className={`${styledJsx.className} resume_card_span`}
+                        >
+                            Proven success engaging and empowering diverse, superstar teams.
+                        </span>
+                        <GiTeamUpgrade color="white" size="4em" />
+                    </div>
+                    <hr />
+                    <div
+                        className={`${styledJsx.className} resume_card`}
+                    >
+                        <span
+                            className={`${styledJsx.className} resume_card_span`}
+                        >
+                            Passionate about learning new technologies, and consistently self-improving.
+                        </span>
+                        <GiDiploma color="white" size="4em" />
+                    </div>
+                    <hr />
+                    <div
+                        className={`${styledJsx.className} resume_card`}
+                    >
+                        <span
+                            className={`${styledJsx.className} resume_card_span`}
+                        >
+                            Committed to engineering best practices and creating clean, maintainable code.
+                        </span>
+                        <FaLaptopCode color="white" size="4em" />
+                    </div>
+                    
+                        
+                        
                 </div>
             </div>
             <div className={`${styledJsx.className} right_pane`}>
