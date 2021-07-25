@@ -57,9 +57,9 @@ export default function NavBar() {
                         About Me
                     </a> 
                 </Link>
-                <Link href='/resume'>
+                <Link href='/resume/testimonials'>
                     <a 
-                        className={router.pathname == '/resume' ? `${styles.active}` : null} 
+                        className={router.pathname.includes('/resume')  ? `${styles.active}` : null} 
                     >
                         Resume
                     </a> 

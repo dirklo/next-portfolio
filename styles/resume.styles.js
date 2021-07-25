@@ -24,6 +24,10 @@ export default css.resolve`
         width: 70%;
         height: 100%;
     }
+
+    .intro_card {
+        margin-bottom: 28px;
+    }
     
     .profile_div {
         margin-bottom: 12px;
@@ -61,7 +65,7 @@ export default css.resolve`
 
     .resume_card {
         padding: 0 24px;
-        margin-bottom: 12px;
+        margin-bottom: 4px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -74,5 +78,31 @@ export default css.resolve`
         text-align: right;
         line-height: 2em;
         padding-right: 24px;
+    }
+
+    .resume_buttons {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .resume_button {
+        position: relative;
+        width: 80%;
+        border: 3px solid white;
+        padding: 4px;
+        margin-bottom: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .resume_button_span {
+        color: white;
     }
 `
