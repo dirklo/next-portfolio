@@ -3,6 +3,9 @@ import { motion, useAnimation } from 'framer-motion'
 import { useRouter } from 'next/router'
 import styledJsx from '../../styles/resume.styles'
 import Testimonials from '../../components/Testimonials'
+import Skills from '../../components/Skills'
+import Experience from '../../components/Experience'
+import Education from '../../components/Education'
 import { GiTeamIdea, GiTeamUpgrade, GiDiploma, GiTalk, GiSkills } from 'react-icons/gi'
 import { FaLaptopCode, FaGraduationCap } from 'react-icons/fa'
 import { GoArrowRight } from 'react-icons/go'
@@ -15,7 +18,22 @@ export default function Resume() {
     const controls = useAnimation();
 
     const handleClick = (e) => {
-        router.push(`/projects/${e.target.dataset.id}`)
+        router.push({
+            pathname: `/resume/${e.target.dataset.id}`,
+        }, undefined, { scroll: false })
+    }
+
+    const selectResumeItem = () => {
+        switch (router.query.id) {
+            case 'testimonials':
+                return <Testimonials />
+            case 'skills':
+                return <Skills />
+            case 'experience':
+                return <Experience />
+            case 'education':
+                return <Education />
+        }
     }
 
     return (
@@ -104,51 +122,93 @@ export default function Resume() {
                         onClick={(e) => handleClick(e)}
                         data-id='testimonials'
                     >
-                        <GiTalk color={router.query.id === 'testimonials' ? 'gold' : 'white'} size='2em' />
+                        <GiTalk 
+                            color={router.query.id === 'testimonials' ? 'gold' : 'white'} 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                         <span
                             className={`${styledJsx.className} resume_button_span`}
+                            style={{ pointerEvents: 'none' }}
                         >
                             Testimonials
                         </span>
-                        <GoArrowRight color='white' size='2em' />
+                        <GoArrowRight 
+                            color='white' 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                     </div>
                     <div
                         className={`${styledJsx.className} resume_button`}
+                        onClick={(e) => handleClick(e)}
+                        data-id='skills'
                     >
-                        <GiSkills color='white' size='2em' />
+                        <GiSkills 
+                            color={router.query.id === 'skills' ? 'gold' : 'white'} 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                         <span
                             className={`${styledJsx.className} resume_button_span`}
+                            style={{ pointerEvents: 'none' }}
                         >
                             Skills
                         </span>
-                        <GoArrowRight color='white' size='2em' />
+                        <GoArrowRight 
+                            color='white' 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                     </div>
                     <div
                         className={`${styledJsx.className} resume_button`}
+                        onClick={(e) => handleClick(e)}
+                        data-id='experience'
                     >
-                        <CgWorkAlt color='white' size='2em' />
+                        <CgWorkAlt 
+                            color={router.query.id === 'experience' ? 'gold' : 'white'} 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}    
+                        />
                         <span
                             className={`${styledJsx.className} resume_button_span`}
+                            style={{ pointerEvents: 'none' }}
                         >
                             Experience
                         </span>
-                        <GoArrowRight color='white' size='2em' />
+                        <GoArrowRight 
+                            color='white' 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                     </div>
                     <div
                         className={`${styledJsx.className} resume_button`}
+                        onClick={(e) => handleClick(e)}
+                        data-id='education'
                     >
-                        <FaGraduationCap color='white' size='2em' />
+                        <FaGraduationCap 
+                            color={router.query.id === 'education' ? 'gold' : 'white'} 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                         <span
                             className={`${styledJsx.className} resume_button_span`}
+                            style={{ pointerEvents: 'none' }}
                         >
                             Education
                         </span>
-                        <GoArrowRight color='white' size='2em' />
+                        <GoArrowRight 
+                            color='white' 
+                            size='2em' 
+                            style={{ pointerEvents: 'none' }}
+                        />
                     </div>
                 </div>
             </div>
             <div className={`${styledJsx.className} right_pane`}>
-                <Testimonials />
+                {selectResumeItem()}
             </div>
             {styledJsx.styles}
         </motion.div>

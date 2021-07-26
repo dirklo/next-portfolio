@@ -1,15 +1,15 @@
 import React from 'react'
-import styledJsx from '../styles/Testimonials.styles'
+import styledJsx from '../styles/Skills.styles'
 
-export default function Testimonials() {
+export default function Skills() {
     return (
         <div
             className={`${styledJsx.className} container`}
         >
             <div
-                className={`${styledJsx.className} testimonial_card`}
+                className={`${styledJsx.className} skill_card`}
             >
-                I AM A TESTIMONIAL
+                I AM A SKILL
             </div>
             {styledJsx.styles}  
         </div>

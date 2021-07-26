@@ -5,8 +5,6 @@ export default css.resolve`
         width: 100%;
         max-width: 1320px;
         margin-top: 100px;
-        height: 100vh;
-        max-height: calc(100vh - 100px);
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
