@@ -15,7 +15,9 @@ export default function Projects() {
         controls.start('hidden')
         setTimeout(() => {
             controls.start('visible')
-            router.push(`/projects/${e.target.dataset.id}`)
+            router.push({
+                pathname: `/projects/${e.target.dataset.id}`,
+            }, undefined, { scroll: false })
         }, 500)
     }
 
