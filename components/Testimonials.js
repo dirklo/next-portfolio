@@ -1,16 +1,38 @@
 import React from 'react'
 import styledJsx from '../styles/Testimonials.styles'
+import Carousel from 'react-material-ui-carousel'
+import testimonialsData from '../data/testimonialsData.json'
 
 export default function Testimonials() {
     return (
         <div
             className={`${styledJsx.className} container`}
         >
-            <div
-                className={`${styledJsx.className} testimonial_card`}
-            >
-                I AM A TESTIMONIAL
-            </div>
+            <Carousel interval='50000'>
+                {testimonialsData.map((testimonial, index) => {
+                    return (
+                        <div
+                            className={`${styledJsx.className} testimonial_card`}
+                            key={index}
+                        >
+                            <div className={`${styledJsx.className} testimonal_card_overlay`}></div>
+                            <h2 className={`${styledJsx.className} testimonial_card_h2`}>
+                                {testimonial.name}
+                            </h2>
+                            <h3 className={`${styledJsx.className} testimonial_card_h3`}>
+                                {testimonial.method}
+                            </h3>
+                            <span className={`${styledJsx.className} testimonial_card_quote`}>
+                                {testimonial.quote}
+                            </span><br />
+                            <span className={`${styledJsx.className} testimonial_card_date`}>
+                                {testimonial.date}
+                            </span>
+                        </div>
+                    )
+                })}
+            </Carousel>
+            
             {styledJsx.styles}  
         </div>
     )

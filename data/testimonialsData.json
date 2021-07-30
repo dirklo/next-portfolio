@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Rohan Phillips",
+        "method":"LinkedIn",
+        "quote":"After randomly joining a table at a recent Hackathon I had the pleasure of working with Rick.  Rick's skills are an incredible asset that make him an invaluable resource.  Big picture vision, works well in a team environment and has the ability to stay focused while working alone.  I&apos;d definitely want to Rick on my team again if the opportunity presented itself!",
+        "date":"July 2, 2021"
+    },
+    {
+        "name":"Stacey McKnight",
+        "method":"LinkedIn",
+        "quote":"When we studied at Flatiron School together, Rick's passion for development and problem solving was evident. He consistently dove deep into concepts and went beyond base requirements when building apps to tackle extra features and more complex challenges. Rick also gave his time to troubleshoot issues with fellow cohort members and was a great collaborator when we teamed up for a multi-day hackathon.",
+        "date":"June 23, 2021"
+    },
+    {
+        "name":"Murat Ogulcan Sahin",
+        "method":"LinkedIn",
+        "quote":"Rick is a perfect communicator and dedicated team player. He did great job putting our hackathon team together and expressing his ideas and logic clearly. His knowledge of Ruby and JavaScript assisted our project with user authentication and API endpoints.",
+        "date":"June 21, 2021"
+    },
+    {
+        "name":"Supervisor Notes, Performance Evaluation",
+        "method":"Carnival Cruise Line",
+        "quote":"Rick is a natural leader, who carries himself with confidence and ease and presents a safe and reassuring consistency to his team.  Rick is approachable and friendly… If  Rick were not as strong-of-character as he is, this may have been a very challenging six weeks for him, but it did not take Rick long to settle in and earn the respect of his team.",
+        "date":"February, 2020"
+    },
+    {
+        "name":"Supervisor Notes, Performance Evaluation",
+        "method":"Carnival Cruise Line",
+        "quote":"Rick is a very strong Leader.  He is passionate about the music program and his art.  I would recommend him to pursue a position working in the shore-side office in order to help develop new initiatives for the musical department.",
+        "date":"May, 2019"
+    }
+]

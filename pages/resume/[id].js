@@ -6,23 +6,16 @@ import Testimonials from '../../components/Testimonials'
 import Skills from '../../components/Skills'
 import Experience from '../../components/Experience'
 import Education from '../../components/Education'
-import { GiTeamIdea, GiTeamUpgrade, GiDiploma, GiTalk, GiSkills } from 'react-icons/gi'
-import { FaLaptopCode, FaGraduationCap } from 'react-icons/fa'
-import { GoArrowRight } from 'react-icons/go'
-import { CgWorkAlt } from 'react-icons/cg'
+import ResumeButton from '../../components/ResumeButton'
+import { GiTeamIdea, GiTeamUpgrade, GiDiploma } from 'react-icons/gi'
+import { FaLaptopCode } from 'react-icons/fa'
+
 
 
 export default function Resume() {
     
     const router = useRouter()
     const controls = useAnimation();
-
-    const handleClick = (e) => {
-        console.log(e.target.dataset.id)
-        router.push({
-            pathname: `/resume/${e.target.dataset.id}`,
-        }, undefined, { scroll: false })
-    }
 
     const selectResumeItem = () => {
         switch (router.query.id) {
@@ -35,58 +28,6 @@ export default function Resume() {
             case 'education':
                 return <Education />
         }
-    }
-
-    const buildResumeItemSelectButton = (title, icon) => {
-        const slug = title.toLowerCase()
-        const pickIcon = () => {
-            switch (icon) {
-                case 'GiTalk':
-                    return <GiTalk 
-                        color={router.query.id === 'testimonials' ? 'gold' : 'white'} 
-                        size='2em' 
-                        style={{ pointerEvents: 'none' }}
-                    />
-                case 'GiSkills':
-                    return <GiSkills 
-                        color={router.query.id === 'skills' ? 'gold' : 'white'} 
-                        size='2em' 
-                        style={{ pointerEvents: 'none' }}
-                    />
-                case 'CgWorkAlt':
-                    return <CgWorkAlt 
-                        color={router.query.id === 'experience' ? 'gold' : 'white'} 
-                        size='2em' 
-                        style={{ pointerEvents: 'none' }}    
-                    />
-                case 'FaGraduationCap':
-                    return <FaGraduationCap 
-                        color={router.query.id === 'education' ? 'gold' : 'white'} 
-                        size='2em' 
-                        style={{ pointerEvents: 'none' }}
-                    />
-            }
-        }
-        return (
-            <div
-                className={`${styledJsx.className} resume_button`}
-                onClick={(e) => handleClick(e)}
-                data-id={slug}
-            >
-                {pickIcon(icon)}
-                <span
-                    className={`${styledJsx.className} resume_button_span`}
-                    style={{ pointerEvents: 'none' }}
-                >
-                    {title}
-                </span>
-                <GoArrowRight 
-                    color='white' 
-                    size='2em' 
-                    style={{ pointerEvents: 'none' }}
-                />
-            </div>
-        )
     }
 
     return (
@@ -169,10 +110,10 @@ export default function Resume() {
                 <div
                     className={`${styledJsx.className} resume_buttons`}
                 >
-                    {buildResumeItemSelectButton('Testimonials', 'GiTalk')}
-                    {buildResumeItemSelectButton('Skills', 'GiSkills')}
-                    {buildResumeItemSelectButton('Experience', 'CgWorkAlt')}
-                    {buildResumeItemSelectButton('Education', 'FaGraduationCap')}
+                    <ResumeButton title='Testimonials' icon='GiTalk' />
+                    <ResumeButton title='Skills' icon='GiSkills' />
+                    <ResumeButton title='Experience' icon='CgWorkAlt' />
+                    <ResumeButton title='Education' icon='FaGraduationCap' />
                 </div>
             </div>
             <div className={`${styledJsx.className} right_pane`}>
