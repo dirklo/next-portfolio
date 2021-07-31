@@ -10,8 +10,6 @@ import ResumeButton from '../../components/ResumeButton'
 import { GiTeamIdea, GiTeamUpgrade, GiDiploma } from 'react-icons/gi'
 import { FaLaptopCode } from 'react-icons/fa'
 
-
-
 export default function Resume() {
     
     const router = useRouter()
