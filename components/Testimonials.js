@@ -1,5 +1,5 @@
 import React from 'react'
-import styledJsx from '../styles/Testimonials1.styles'
+import styledJsx from '../styles/Testimonials.styles'
 import Carousel from 'react-material-ui-carousel'
 import testimonialsData from '../data/testimonialsData.json'
 import { BsChatQuoteFill } from 'react-icons/bs'
