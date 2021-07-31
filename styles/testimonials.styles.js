@@ -20,31 +20,37 @@ export default css.resolve`
         overflow: hidden;
     }
 
-    .testimonal_card_overlay {
-        background-color: green;
+    .testimonial_card::before {
+        content: "''";
+        font-size: 200px;
         position: absolute;
+        inset: 0;
         height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        left: 0;
-        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 0;
     }
 
     .testimonial_card_h2 {
+        position: relative;
         color: purple;
         z-index: 1;
     }
     .testimonial_card_h3 {
+        position: relative;
         color: purple;
         z-index: 1;
     }
     .testimonial_card_quote {
+        position: relative;
         color: purple;
         z-index: 1;
     }
     .testimonial_card_date {
+        position: relative;
         color: purple;
         z-index: 1;
     }

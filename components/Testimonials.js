@@ -15,7 +15,6 @@ export default function Testimonials() {
                             className={`${styledJsx.className} testimonial_card`}
                             key={index}
                         >
-                            <div className={`${styledJsx.className} testimonal_card_overlay`}></div>
                             <h2 className={`${styledJsx.className} testimonial_card_h2`}>
                                 {testimonial.name}
                             </h2>
