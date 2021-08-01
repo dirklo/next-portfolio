@@ -82,7 +82,7 @@ export default css.resolve`
         position: relative;
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: center;
     }

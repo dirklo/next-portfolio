@@ -6,6 +6,7 @@ export default css.resolve`
         width: 80%;
         border: 3px solid white;
         padding: 4px;
+        margin: 0 12px;
         margin-bottom: 4px;
         display: flex;
         flex-direction: row;

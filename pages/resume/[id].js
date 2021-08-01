@@ -105,6 +105,8 @@ export default function Resume() {
                         <FaLaptopCode color='white' size='4em' />
                     </div>
                 </div>
+            </div>
+            <div className={`${styledJsx.className} right_pane`}>
                 <div
                     className={`${styledJsx.className} resume_buttons`}
                 >
@@ -113,8 +115,6 @@ export default function Resume() {
                     <ResumeButton title='Experience' icon='CgWorkAlt' />
                     <ResumeButton title='Education' icon='FaGraduationCap' />
                 </div>
-            </div>
-            <div className={`${styledJsx.className} right_pane`}>
                 {selectResumeItem()}
             </div>
             {styledJsx.styles}
