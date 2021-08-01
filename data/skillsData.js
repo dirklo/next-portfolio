@@ -5,33 +5,33 @@ import { DiRuby } from 'react-icons/di'
 export function pickIcon(name) {
     switch (name) {
         case 'GrReactjs':
-            return <GrReactjs size='30' color='black' />
+            return <GrReactjs size='30' />
         case 'SiRedux':
-            return <SiRedux size='30' color='black' />
+            return <SiRedux size='30' />
         case 'SiRails':
-            return <SiRails size='45' color='black' />
+            return <SiRails size='45' />
         case 'SiJavascript':
-            return <SiJavascript size='30' color='black' />
+            return <SiJavascript size='30' />
         case 'SiNextDotJs':
-            return <SiNextDotJs size='30' color='black' />
+            return <SiNextDotJs size='30' />
         case 'SiFramer':
-            return <SiFramer size='30' color='black' />
+            return <SiFramer size='30' />
         case 'SiHtml5':
-            return <SiHtml5 size='30' color='black' />
+            return <SiHtml5 size='30' />
         case 'SiCss3':
-            return <SiCss3 size='30' color='black' />
+            return <SiCss3 size='30' />
         case 'SiPostgresql':
-            return <SiPostgresql size='30' color='black' />
+            return <SiPostgresql size='30' />
         case 'SiNodeDotJs':
-            return <SiNodeDotJs size='30' color='black' />
+            return <SiNodeDotJs size='30' />
         case 'SiMongodb':
-            return <SiMongodb size='30' color='black' />
+            return <SiMongodb size='30' />
         case 'SiBootstrap':
-            return <SiBootstrap size='30' color='black' />
+            return <SiBootstrap size='30' />
         case 'SiPython':
-            return <SiPython size='30' color='black' />
+            return <SiPython size='30' />
         case 'DiRuby':
-            return <DiRuby size='30' color='black' />
+            return <DiRuby size='30' />
     }
 }
 
