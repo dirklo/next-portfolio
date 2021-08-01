@@ -4,7 +4,15 @@ export default css.resolve`
     .container {
         background: transparent;
         height: 100%;
-        padding: 100px 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .skill_card_container {
+        width: 500px;
+        margin-top: 24px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

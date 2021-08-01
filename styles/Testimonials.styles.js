@@ -4,6 +4,7 @@ export default css.resolve`
     .container {
         background: transparent;
         height: 100%;
+        margin-top: 12px;
         display: flex;
         flex-direction: column;
         justify-content: center;

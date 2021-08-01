@@ -32,26 +32,30 @@ export default function Skills() {
             }
 
         >
-            {skills.map((skill, index) =>
-                <motion.div
+            <div
+                className={`${styledJsx.className} skill_card_container`}
+            >
+                {skills.map((skill, index) =>
+                    <motion.div
                     key={index}
                     className={`${styledJsx.className} skill_card`}
                     initial="moved" 
                     animate="positioned"
                     variants={buildVariants((index % 2 === 0 ? 'left' : 'right'), index * 0.05)}
-                >
-                    <div
-                        className={`${styledJsx.className} skill_card_logo`}
                     >
-                        {pickIcon(skill.icon)}
-                    </div>
-                    <h2
-                        className={`${styledJsx.className} skill_card_h2`}
-                    >
-                        {skill.name}
-                    </h2>
-                </motion.div>
-            )}
+                        <div
+                            className={`${styledJsx.className} skill_card_logo`}
+                            >
+                            {pickIcon(skill.icon)}
+                        </div>
+                        <h2
+                            className={`${styledJsx.className} skill_card_h2`}
+                        >
+                            {skill.name}
+                        </h2>
+                    </motion.div>
+                )}
+            </div>
             {styledJsx.styles}
         </motion.div>
     )
