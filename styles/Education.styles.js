@@ -7,7 +7,7 @@ export default css.resolve`
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .traditional_container {
