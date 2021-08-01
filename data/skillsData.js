@@ -1,33 +1,37 @@
 import { GrReactjs } from 'react-icons/gr'
-import { SiRedux, SiRails, SiJavascript, SiNextDotJs, SiFramer, SiHtml5, SiCss3, SiPostgresql, SiNodeDotJs, SiMongodb } from 'react-icons/si'
+import { SiRedux, SiRails, SiJavascript, SiNextDotJs, SiFramer, SiHtml5, SiCss3, SiPostgresql, SiNodeDotJs, SiMongodb, SiBootstrap, SiPython } from 'react-icons/si'
 import { DiRuby } from 'react-icons/di'
 
-export function pickIcon(name, size = 30, color = 'black') {
+export function pickIcon(name) {
     switch (name) {
         case 'GrReactjs':
-            return <GrReactjs size={`${size}`} color={color} />
+            return <GrReactjs size='30' color='black' />
         case 'SiRedux':
-            return <SiRedux size={`${size}`} color={color} />
+            return <SiRedux size='30' color='black' />
         case 'SiRails':
-            return <SiRails size={`${size}`} color={color} />
+            return <SiRails size='45' color='black' />
         case 'SiJavascript':
-            return <SiJavascript size={`${size}`} color={color} />
+            return <SiJavascript size='30' color='black' />
         case 'SiNextDotJs':
-            return <SiNextDotJs size={`${size}`} color={color} />
+            return <SiNextDotJs size='30' color='black' />
         case 'SiFramer':
-            return <SiFramer size={`${size}`} color={color} />
+            return <SiFramer size='30' color='black' />
         case 'SiHtml5':
-            return <SiHtml5 size={`${size}`} color={color} />
+            return <SiHtml5 size='30' color='black' />
         case 'SiCss3':
-            return <SiCss3 size={`${size}`} color={color} />
+            return <SiCss3 size='30' color='black' />
         case 'SiPostgresql':
-            return <SiPostgresql size={`${size}`} color={color} />
+            return <SiPostgresql size='30' color='black' />
         case 'SiNodeDotJs':
-            return <SiNodeDotJs size={`${size}`} color={color} />
+            return <SiNodeDotJs size='30' color='black' />
         case 'SiMongodb':
-            return <SiMongodb size={`${size}`} color={color} />
+            return <SiMongodb size='30' color='black' />
+        case 'SiBootstrap':
+            return <SiBootstrap size='30' color='black' />
+        case 'SiPython':
+            return <SiPython size='30' color='black' />
         case 'DiRuby':
-            return <DiRuby size={`${size}`} color={color} />
+            return <DiRuby size='30' color='black' />
     }
 }
 
@@ -61,6 +65,10 @@ export const skills = [
         "icon":"SiFramer"
     },
     {
+        "name":"Bootstrap",
+        "icon":"SiBootstrap"
+    },
+    {
         "name":"HTML5",
         "icon":"SiHtml5"
     },
@@ -79,6 +87,10 @@ export const skills = [
     {
         "name":"Mongo DB",
         "icon":"SiMongodb"
+    },
+    {
+        "name":"Python",
+        "icon":"SiPython"
     },
 
 ]
