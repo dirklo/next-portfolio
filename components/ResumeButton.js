@@ -57,11 +57,6 @@ export default function ResumeButton({ title, icon }){
             >
                 {title}
             </span>
-            <GoArrowRight 
-                color='white' 
-                size='2em' 
-                style={{ pointerEvents: 'none' }}
-            />
             {styledJsx.styles}
         </div>
     )

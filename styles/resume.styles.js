@@ -83,7 +83,7 @@ export default css.resolve`
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 `

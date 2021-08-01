@@ -3,7 +3,6 @@ import css from 'styled-jsx/css'
 export default css.resolve`
     .resume_button {
         position: relative;
-        width: 80%;
         border: 3px solid white;
         padding: 4px;
         margin: 0 12px;
