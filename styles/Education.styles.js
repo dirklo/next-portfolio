@@ -12,12 +12,23 @@ export default css.resolve`
 
     .traditional_container {
         width: 50%;
+        padding: 24px;
     }
     .self_study_container {
         width: 50%;
+        padding: 24px;
     }
-    
+
+    .section_title {
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+
     .education_card {
-        background: grey;
+        padding: 24px;
+        background: rgb(255, 255, 255);
+        margin-bottom: 12px;
+        border-radius: 15px;
     }
 `

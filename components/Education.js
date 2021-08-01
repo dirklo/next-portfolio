@@ -1,5 +1,6 @@
 import React from 'react'
 import styledJsx from '../styles/Education.styles'
+import Image from 'next/image'
 
 export default function Education() {
     return (
@@ -9,10 +10,21 @@ export default function Education() {
             <section
                 className={`${styledJsx.className} traditional_container`}
             >
-                <h1>Traditional Education</h1>
+                <h1
+                    className={`${styledJsx.className} section_title`}
+                >
+                    Traditional Education
+                </h1>
                 <div
                     className={`${styledJsx.className} education_card`}
                     >
+                    <Image 
+                        src='/flatiron.svg' 
+                        alt='Flatiron School'
+                        width='92'
+                        height='69'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                         >
@@ -32,6 +44,13 @@ export default function Education() {
                 <div
                     className={`${styledJsx.className} education_card`}
                     >
+                    <Image 
+                        src='/berklee.png' 
+                        alt='Flatiron School'
+                        width='199'
+                        height='69'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                         >
@@ -52,10 +71,21 @@ export default function Education() {
             <section
                 className={`${styledJsx.className} self-study_container`}
             >
-                <h1>Self-Study Courses</h1>
+                <h1
+                    className={`${styledJsx.className} section_title`}
+                >
+                    Self-Study Courses
+                </h1>
                 <div
                     className={`${styledJsx.className} education_card`}
                 >
+                    <Image 
+                        src='/udemy.svg' 
+                        alt='Flatiron School'
+                        width='144'
+                        height='42'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                     >
@@ -75,6 +105,13 @@ export default function Education() {
                 <div
                     className={`${styledJsx.className} education_card`}
                 >
+                    <Image 
+                        src='/udemy.svg' 
+                        alt='Flatiron School'
+                        width='144'
+                        height='42'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                     >
@@ -94,6 +131,13 @@ export default function Education() {
                 <div
                     className={`${styledJsx.className} education_card`}
                 >
+                    <Image 
+                        src='/udemy.svg' 
+                        alt='Flatiron School'
+                        width='144'
+                        height='42'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                     >
@@ -113,6 +157,13 @@ export default function Education() {
                 <div
                     className={`${styledJsx.className} education_card`}
                 >
+                    <Image 
+                        src='/udemy.svg' 
+                        alt='Flatiron School'
+                        width='144'
+                        height='42'
+                        layout='fixed'
+                    />
                     <h2
                         className={`${styledJsx.className} education_card_h2`}
                     >
