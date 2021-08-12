@@ -60,25 +60,55 @@ export default function Contact() {
             exit={{ opacity: 0 }}
             className={`${styledJsx.className} contact`}
         >
-            <form onSubmit={sendMessage}>
-                <label htmlFor="contactName">Name</label>
-                <br/>
-                <input id="contactName" name="contactName" type="text" autoComplete="name" value={contactName} onChange={e => handleChange(e)} required />
-                <br/><br/>
-                <label htmlFor="email">Email</label>
-                <br/>
-                <input id="email" name="email" type="email" autoComplete="email" value={email} onChange={e => handleChange(e)} required />
-                <br/><br/>
-                <label htmlFor="message">Message</label>
-                <br/>
-                <input id="message" name="message" type="textarea" value={message} onChange={e => handleChange(e)} required />
-                <br/><br/>
-                <button type="submit">Send Message</button>
-            </form>
-            <div>
-                {sending ? <span>SENDING</span> : null}
-                {success ? <span>Thank you, message sent!</span> : null}
-                {failure ? <span>Something went wrong!  Please try again later...</span> : null}
+            <div
+                className={`${styledJsx.className} form_container`}
+            >
+                <form onSubmit={sendMessage}>
+                    <label htmlFor="contactName">Name</label>
+                    <br/>
+                    <input 
+                        id="contactName"    
+                        name="contactName"
+                        className={`${styledJsx.className} input`} 
+                        type="text" 
+                        autoComplete="name" 
+                        value={contactName} 
+                        onChange={e => handleChange(e)} 
+                        required
+                    />
+                    <br/><br/>
+                    <label htmlFor="email">Email</label>
+                    <br/>
+                    <input 
+                        id="email" 
+                        name="email" 
+                        type="email" 
+                        className={`${styledJsx.className} input`} 
+                        autoComplete="email" 
+                        value={email} 
+                        onChange={e => handleChange(e)} 
+                        required />
+                    <br/><br/>
+                    <label htmlFor="message">Message</label>
+                    <br/>
+                    <textarea
+                        rows='10' 
+                        id="message" 
+                        name="message" 
+                        type="textarea"
+                        className={`${styledJsx.className} message_input`}  
+                        value={message} 
+                        onChange={e => handleChange(e)} 
+                        required 
+                    />
+                    <br/><br/>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div>
+                    {sending ? <span>SENDING</span> : null}
+                    {success ? <span>Thank you, message sent!</span> : null}
+                    {failure ? <span>Something went wrong!  Please try again later...</span> : null}
+                </div>
             </div>
             {styledJsx.styles}
         </motion.div>
