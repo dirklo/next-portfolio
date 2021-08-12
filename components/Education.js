@@ -125,7 +125,7 @@ export default function Education() {
                     <div
                         className={`${styledJsx.className} education_card_dates`}
                     >
-                        Completed November 2021
+                        Completed November 2020
                     </div>
                 </div>
                 <div
@@ -151,7 +151,7 @@ export default function Education() {
                     <div
                         className={`${styledJsx.className} education_card_dates`}
                     >
-                        Completed October 2021
+                        Completed October 2020
                     </div>
                 </div>
                 <div
@@ -177,7 +177,7 @@ export default function Education() {
                     <div
                         className={`${styledJsx.className} education_card_dates`}
                     >
-                        Completed September 2021
+                        Completed September 2020
                     </div>
                 </div>
             </section>
