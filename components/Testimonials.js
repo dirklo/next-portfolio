@@ -9,7 +9,7 @@ export default function Testimonials() {
         <div
             className={`${styledJsx.className} container`}
         >
-            <Carousel interval='50000'>
+            <Carousel interval='7000'>
                 {testimonialsData.map((testimonial, index) => {
                     return (
                         <div
