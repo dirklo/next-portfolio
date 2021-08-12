@@ -17,4 +17,12 @@ export default css.resolve`
     .resume_button_span {
         color: white;
     }
+
+    .selected {
+        border: 3px solid gold;
+    }
+
+    .selected_text {
+        color: gold;
+    }
 `

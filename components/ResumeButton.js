@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import styledJsx from '../styles/ResumeButton.styles'
 import { GiTalk, GiSkills } from 'react-icons/gi'
 import { FaGraduationCap } from 'react-icons/fa'
-import { GoArrowRight } from 'react-icons/go'
 import { CgWorkAlt } from 'react-icons/cg'
 
 export default function ResumeButton({ title, icon }){
@@ -46,13 +45,13 @@ export default function ResumeButton({ title, icon }){
     }
     return (
         <div
-            className={`${styledJsx.className} resume_button`}
+            className={`${styledJsx.className} resume_button ${router.query.id === slug ? 'selected' : null}`}
             onClick={(e) => handleClick(e)}
             data-id={slug}
         >
             {pickIcon(icon)}
             <span
-                className={`${styledJsx.className} resume_button_span`}
+                className={`${styledJsx.className} resume_button_span ${router.query.id === slug ? 'selected_text' : null}`}
                 style={{ pointerEvents: 'none' }}
             >
                 {title}
