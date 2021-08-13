@@ -60,11 +60,17 @@ export default function Contact() {
             exit={{ opacity: 0 }}
             className={`${styledJsx.className} contact`}
         >
+            <h2 className={styledJsx.className}>Communication is everything! <br/>  Send me a message any time!</h2>
             <div
                 className={`${styledJsx.className} form_container`}
             >
                 <form onSubmit={sendMessage}>
-                    <label htmlFor="contactName">Name</label>
+                    <label 
+                        className={`${styledJsx.className} label`}  
+                        htmlFor="contactName"
+                    >
+                            Name
+                    </label>
                     <br/>
                     <input 
                         id="contactName"    
@@ -77,7 +83,12 @@ export default function Contact() {
                         required
                     />
                     <br/><br/>
-                    <label htmlFor="email">Email</label>
+                    <label 
+                        htmlFor="email"
+                        className={`${styledJsx.className} label`}  
+                    >
+                        Email
+                    </label>
                     <br/>
                     <input 
                         id="email" 
@@ -89,7 +100,12 @@ export default function Contact() {
                         onChange={e => handleChange(e)} 
                         required />
                     <br/><br/>
-                    <label htmlFor="message">Message</label>
+                    <label 
+                        htmlFor="message"
+                        className={`${styledJsx.className} label`}  
+                    >
+                        Message
+                    </label>
                     <br/>
                     <textarea
                         rows='10' 

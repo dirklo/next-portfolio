@@ -5,12 +5,14 @@ export default css.resolve`
         width: 100%;
         max-width: 1320px;
         margin-top: 100px;
-        background-color: teal;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
 
+    }
+    h2 {
+        color: white;
     }
     .form_container {
         width: 500px;
@@ -20,6 +22,9 @@ export default css.resolve`
         background: transparent;
         border: none;
         border-bottom: 3px solid white;
+    }
+    .label {
+        color: white;
     }
     .message_input {
         width: 100%;
