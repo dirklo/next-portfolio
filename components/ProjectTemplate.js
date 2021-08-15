@@ -86,7 +86,7 @@ export default function ProjectTemplate({ project }) {
             </motion.section>
             <motion.section 
                 className={`${styledJsx.className} right_pane`}
-                initial={{ x: 1000 }}
+                initial={{ x: 1500 }}
                 animate={{ x: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{
