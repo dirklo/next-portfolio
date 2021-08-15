@@ -20,11 +20,30 @@ export default css.resolve`
     .input {
         width: 100%;
         background: transparent;
+        margin-bottom: 1em;
+        font-size: 2em;
         border: none;
         border-bottom: 3px solid white;
+        color: white;
+    }
+    .input:focus {
+        outline: none;
     }
     .label {
+        position: relative;
+        top: 1.5em;
+        left: .5em;
         color: white;
+        font-size: 1.5em;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+    .selected {
+        position: relative;
+        top: 0em;
+        left: 0em;
+        font-size: 1em;
+        color: lightblue;
     }
     .message_input {
         width: 100%;

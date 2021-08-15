@@ -9,7 +9,9 @@ const initialState = {
     message: '',
     sending: false,
     success: false,
-    failure: false
+    failure: false,
+    contactNameSelected: false,
+    emailSelected: false
 }
 
 function reducer(state, { field, value }) {
@@ -32,6 +34,14 @@ export default function Contact() {
     function handleChange(e) {
         dispatch({ field: e.target.name, value: e.target.value })
     }
+
+    function handleFocus(e) {
+        dispatch({ field: `${e.target.name}Selected`, value: true })
+    }
+
+    function handleBlur(e) {
+        dispatch({ field: `${e.target.name}Selected`, value: false })
+    }
     
     async function sendMessage(e) {
         e.preventDefault();
@@ -51,7 +61,7 @@ export default function Contact() {
         resetState()
     }, [])
     
-    const { contactName, email, message, sending, success, failure } = state
+    const { contactName, email, message, sending, success, failure, contactNameSelected, emailSelected } = state
     
     return (
         <motion.div
@@ -66,7 +76,7 @@ export default function Contact() {
             >
                 <form onSubmit={sendMessage}>
                     <label 
-                        className={`${styledJsx.className} label`}  
+                        className={`${styledJsx.className} label` + ' ' + `${contactNameSelected ? 'selected' : ''}`}
                         htmlFor="contactName"
                     >
                             Name
@@ -79,13 +89,15 @@ export default function Contact() {
                         type="text" 
                         autoComplete="name" 
                         value={contactName} 
-                        onChange={e => handleChange(e)} 
+                        onChange={e => handleChange(e)}
+                        onFocus={e => handleFocus(e)} 
+                        onBlur={e => handleBlur(e)} 
                         required
                     />
                     <br/><br/>
                     <label 
                         htmlFor="email"
-                        className={`${styledJsx.className} label`}  
+                        className={`${styledJsx.className} label` + ' ' + `${emailSelected ? 'selected' : ''}`}  
                     >
                         Email
                     </label>
@@ -97,7 +109,9 @@ export default function Contact() {
                         className={`${styledJsx.className} input`} 
                         autoComplete="email" 
                         value={email} 
-                        onChange={e => handleChange(e)} 
+                        onChange={e => handleChange(e)}
+                        onFocus={e => handleFocus(e)} 
+                        onBlur={e => handleBlur(e)}  
                         required />
                     <br/><br/>
                     <label 
