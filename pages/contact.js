@@ -40,7 +40,9 @@ export default function Contact() {
     }
 
     function handleBlur(e) {
-        dispatch({ field: `${e.target.name}Selected`, value: false })
+        if (e.target.value === '') {
+            dispatch({ field: `${e.target.name}Selected`, value: false })
+        }
     }
     
     async function sendMessage(e) {
@@ -75,48 +77,57 @@ export default function Contact() {
                 className={`${styledJsx.className} form_container`}
             >
                 <form onSubmit={sendMessage}>
-                    <label 
-                        className={`${styledJsx.className} label` + ' ' + `${contactNameSelected ? 'selected' : ''}`}
-                        htmlFor="contactName"
+                    <div 
+                        className={`${styledJsx.className} input_container`} 
                     >
-                            Name
-                    </label>
-                    <br/>
-                    <input 
-                        id="contactName"    
-                        name="contactName"
-                        className={`${styledJsx.className} input`} 
-                        type="text" 
-                        autoComplete="name" 
-                        value={contactName} 
-                        onChange={e => handleChange(e)}
-                        onFocus={e => handleFocus(e)} 
-                        onBlur={e => handleBlur(e)} 
-                        required
-                    />
+                        <label 
+                            className={`${styledJsx.className} label` + ' ' + `${contactNameSelected ? 'selected' : ''}`}
+                            htmlFor="contactName"
+                        >
+                                Name
+                        </label>
+                        <br/>
+                        <input 
+                            id="contactName"    
+                            name="contactName"
+                            className={`${styledJsx.className} input`} 
+                            type="text" 
+                            autoComplete="name" 
+                            value={contactName} 
+                            onChange={e => handleChange(e)}
+                            onFocus={e => handleFocus(e)} 
+                            onBlur={e => handleBlur(e)} 
+                            required
+                        />
+                    </div>
                     <br/><br/>
-                    <label 
-                        htmlFor="email"
-                        className={`${styledJsx.className} label` + ' ' + `${emailSelected ? 'selected' : ''}`}  
+                    <div 
+                        className={`${styledJsx.className} input_container`} 
                     >
-                        Email
-                    </label>
-                    <br/>
-                    <input 
-                        id="email" 
-                        name="email" 
-                        type="email" 
-                        className={`${styledJsx.className} input`} 
-                        autoComplete="email" 
-                        value={email} 
-                        onChange={e => handleChange(e)}
-                        onFocus={e => handleFocus(e)} 
-                        onBlur={e => handleBlur(e)}  
-                        required />
-                    <br/><br/>
+                        <label 
+                            htmlFor="email"
+                            className={`${styledJsx.className} label` + ' ' + `${emailSelected ? 'selected' : ''}`}  
+                        >
+                            Email
+                        </label>
+                        <br/>
+                        <input 
+                            id="email" 
+                            name="email" 
+                            type="email" 
+                            className={`${styledJsx.className} input`} 
+                            autoComplete="email" 
+                            value={email} 
+                            onChange={e => handleChange(e)}
+                            onFocus={e => handleFocus(e)} 
+                            onBlur={e => handleBlur(e)}  
+                            required 
+                        />
+                    </div>
+                    <br/><br/><br/>
                     <label 
                         htmlFor="message"
-                        className={`${styledJsx.className} label`}  
+                        className={`${styledJsx.className} message_label`}  
                     >
                         Message
                     </label>

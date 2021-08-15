@@ -17,10 +17,12 @@ export default css.resolve`
     .form_container {
         width: 500px;
     }
+    .input_container {
+        position: relative;
+    }
     .input {
         width: 100%;
         background: transparent;
-        margin-bottom: 1em;
         font-size: 2em;
         border: none;
         border-bottom: 3px solid white;
@@ -30,8 +32,8 @@ export default css.resolve`
         outline: none;
     }
     .label {
-        position: relative;
-        top: 1.5em;
+        position: absolute;
+        top: 1.2em;
         left: .5em;
         color: white;
         font-size: 1.5em;
@@ -39,15 +41,27 @@ export default css.resolve`
         transition: all 0.3s ease-in-out;
     }
     .selected {
-        position: relative;
+        position: absolute;
         top: 0em;
         left: 0em;
         font-size: 1em;
         color: lightblue;
     }
+    .message_label {
+        position: relative;
+        left: .5em;
+        color: white;
+        font-size: 1.5em;
+    }
     .message_input {
         width: 100%;
         background: transparent;
+        padding: 1em;
         border: 3px solid white;
+        color: white;
+        resize: none;
+    }
+    .message_input:focus {
+        outline: none;
     }
 `
