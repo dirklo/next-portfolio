@@ -5,17 +5,10 @@ import { GiTalk, GiSkills } from 'react-icons/gi'
 import { FaGraduationCap } from 'react-icons/fa'
 import { CgWorkAlt } from 'react-icons/cg'
 
-export default function ResumeButton({ title, icon }){
-    const router = useRouter()
-
-    const handleClick = (e) => {
-        console.log(e.target.dataset.id)
-        router.push({
-            pathname: `/resume/${e.target.dataset.id}`,
-        }, undefined, { scroll: false })
-    }
-
+export default function ResumeButton({ title, icon, handleClick }){
     const slug = title.toLowerCase()
+    const router = useRouter()
+    
     const pickIcon = () => {
         switch (icon) {
             case 'GiTalk':

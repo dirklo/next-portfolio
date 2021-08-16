@@ -13,7 +13,7 @@ import { FaLaptopCode } from 'react-icons/fa'
 export default function Resume() {
     
     const router = useRouter()
-    const controls = useAnimation();
+    const controls = useAnimation()
 
     const selectResumeItem = () => {
         switch (router.query.id) {
@@ -27,6 +27,29 @@ export default function Resume() {
                 return <Education />
         }
     }
+
+    const handleClick = (e) => {
+        controls.start('hidden')
+        setTimeout(() => {
+            controls.start('visible')
+            router.push({
+                pathname: `/resume/${e.target.dataset.id}`,
+            }, undefined, { scroll: false })
+        }, 500)
+    }
+
+    const zoomOut = {
+        hidden: {
+            opacity: 0,
+            y: 500,
+            transition: { duration: .5 }
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0 }
+        }
+    };
 
     return (
         <motion.div
@@ -110,12 +133,19 @@ export default function Resume() {
                 <div
                     className={`${styledJsx.className} resume_buttons`}
                 >
-                    <ResumeButton title='Testimonials' icon='GiTalk' />
-                    <ResumeButton title='Skills' icon='GiSkills' />
-                    <ResumeButton title='Experience' icon='CgWorkAlt' />
-                    <ResumeButton title='Education' icon='FaGraduationCap' />
+                    <ResumeButton title='Testimonials' icon='GiTalk' handleClick={handleClick} />
+                    <ResumeButton title='Skills' icon='GiSkills' handleClick={handleClick}/>
+                    <ResumeButton title='Experience' icon='CgWorkAlt' handleClick={handleClick}/>
+                    <ResumeButton title='Education' icon='FaGraduationCap' handleClick={handleClick}/>
                 </div>
-                {selectResumeItem()}
+                <motion.div
+                    className={`${styledJsx.className} resumeDisplay`}
+                    variants={zoomOut}
+                    initial='visible'
+                    animate={controls}    
+                >
+                    {selectResumeItem()}
+                </motion.div>
             </div>
             {styledJsx.styles}
         </motion.div>

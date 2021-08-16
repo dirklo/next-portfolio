@@ -19,8 +19,10 @@ export default css.resolve`
     }
 
     .experience_card {
+        width: 90%;
         background: rgb(177, 189, 236);
         padding: 24px;
+        margin-bottom: 12px;
         border-radius: 15px;
     }
 `

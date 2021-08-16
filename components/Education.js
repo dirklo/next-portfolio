@@ -1,11 +1,14 @@
 import React from 'react'
 import styledJsx from '../styles/Education.styles'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function Education() {
     return (
-        <div
+        <motion.div
             className={`${styledJsx.className} container`}
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
         >
             <section
                 className={`${styledJsx.className} traditional_container`}
@@ -182,6 +185,6 @@ export default function Education() {
                 </div>
             </section>
             {styledJsx.styles}  
-        </div>
+        </motion.div>
     )
 }

@@ -1,13 +1,16 @@
 import React from 'react'
 import styledJsx from '../styles/Experience.styles'
+import { motion } from 'framer-motion'
 
 export default function Experience() {
     return (
         <div
             className={`${styledJsx.className} container`}
         >
-            <div
+            <motion.div
                 className={`${styledJsx.className} experience_container`}
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
             >
                 <div
                     className={`${styledJsx.className} experience_card`}
@@ -61,7 +64,61 @@ export default function Experience() {
                         </li>
                     </ul>
                 </div>
-            </div>
+                <div
+                    className={`${styledJsx.className} experience_card`}
+                >
+                    <h2
+                        className={`${styledJsx.className} experience_card_h2`}
+                    >
+                        Great Modulator Productions
+                    </h2>
+                    <h3
+                        className={`${styledJsx.className} experience_card_h3`}
+                    >
+                        Engineer and Co-owner
+                    </h3>
+                    <div
+                        className={`${styledJsx.className} experience_card_dates`}
+                    >
+                        August 2009 - July 2014    
+                    </div>
+                    <ul>
+                        <li>
+                            Worked with musical artists to record, mix and master over 50 full-length albums.  
+                        </li>
+                        <li>
+                            Provided technical oversight and equipment management.
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    className={`${styledJsx.className} experience_card`}
+                >
+                    <h2
+                        className={`${styledJsx.className} experience_card_h2`}
+                    >
+                        Bose Corporation
+                    </h2>
+                    <h3
+                        className={`${styledJsx.className} experience_card_h3`}
+                    >
+                        Product and Technical Support Specialist II
+                    </h3>
+                    <div
+                        className={`${styledJsx.className} experience_card_dates`}
+                    >
+                        July 2007 - August 2009    
+                    </div>
+                    <ul>
+                        <li>
+                            Provided technical support to over 70 customers daily.
+                        </li>
+                        <li>
+                            Implemented feedback loops with R&D to continually improve product lines.
+                        </li>
+                    </ul>
+                </div>
+            </motion.div>
             {styledJsx.styles}  
         </div>
     )
