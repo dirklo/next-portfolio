@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import styledJsx from '../styles/ResumeButton.styles'
+import { motion } from 'framer-motion'
 import { GiTalk, GiSkills } from 'react-icons/gi'
 import { FaGraduationCap } from 'react-icons/fa'
 import { CgWorkAlt } from 'react-icons/cg'
@@ -44,10 +45,14 @@ export default function ResumeButton({ title, icon }){
         }
     }
     return (
-        <div
+        <motion.div
             className={`${styledJsx.className} resume_button ${router.query.id === slug ? 'selected' : null}`}
             onClick={(e) => handleClick(e)}
             data-id={slug}
+            whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3 }
+            }}
         >
             {pickIcon(icon)}
             <span
@@ -57,6 +62,6 @@ export default function ResumeButton({ title, icon }){
                 {title}
             </span>
             {styledJsx.styles}
-        </div>
+        </motion.div>
     )
 }

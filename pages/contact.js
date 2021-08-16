@@ -113,7 +113,7 @@ export default function Contact() {
                         <br/>
                         <input 
                             id="email" 
-                            name="email" 
+                            name="email"
                             type="email" 
                             className={`${styledJsx.className} input`} 
                             autoComplete="email" 
