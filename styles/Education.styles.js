@@ -27,7 +27,7 @@ export default css.resolve`
 
     .education_card {
         padding: 24px;
-        background: rgb(190, 189, 233);
+        background: rgb(177, 189, 236);
         margin-bottom: 12px;
         border-radius: 15px;
     }

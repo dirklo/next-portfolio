@@ -19,7 +19,7 @@ export default css.resolve`
     }
 
     .experience_card {
-        background: rgb(255, 255, 255);
+        background: rgb(177, 189, 236);
         padding: 24px;
         border-radius: 15px;
     }

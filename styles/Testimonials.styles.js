@@ -19,7 +19,7 @@ export default css.resolve`
         padding: 32px;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.504);
         overflow: hidden;
-        background-color: white;
+        background: rgb(177, 189, 236);
     }
 
     .testimonial_card_icon {
