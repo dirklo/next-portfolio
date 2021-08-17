@@ -60,6 +60,10 @@ export default css.resolve`
         color: rgb(117, 117, 117);
         text-align: center;
     }
+    .resume_display {
+        position: relative;
+        width: 100%;
+    }
 
     .resume_card {
         padding: 0 24px;

@@ -139,7 +139,7 @@ export default function Resume() {
                     <ResumeButton title='Education' icon='FaGraduationCap' handleClick={handleClick}/>
                 </div>
                 <motion.div
-                    className={`${styledJsx.className} resumeDisplay`}
+                    className={`${styledJsx.className} resume_display`}
                     variants={zoomOut}
                     initial='visible'
                     animate={controls}    
