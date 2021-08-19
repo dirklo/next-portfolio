@@ -1,5 +1,7 @@
+import { React, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Landing from '../components/Landing'
+import LandingSm from '../components/LandingSm'
 
 export function getStaticProps() {
   return (
@@ -8,6 +10,17 @@ export function getStaticProps() {
 }
 
 export default function Home() {
+  const [ width, setWidth ] = useState(0)
+  
+  function setWindowWidth() {
+    setWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    setWindowWidth()
+    window.addEventListener('resize', setWindowWidth)
+  }, [])
+
   return (
     <div 
       className='container'
@@ -18,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='main'>
-        <Landing />
+        {width >= 1320 ? <Landing /> : <LandingSm />}
       </main>
 
       <style jsx>{`
